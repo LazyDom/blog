@@ -1,6 +1,6 @@
 # LazyDom's Blog
 
-Welcome! Here are my latest posts:
+Welcome to my personal blog repository! Here you’ll find my technical articles, guides, and notes in Markdown format.
 
 ## Posts
 
@@ -8,6 +8,11 @@ Welcome! Here are my latest posts:
 
 <!-- Add more posts as you write them -->
 
+## About
+
+I write about Security, Home Automations, IOT, DevOps, Kubernetes, and other tech topics.  
+Feel free to browse, suggest edits, or contribute!
+
 ---
 
-*For more, visit my [GitHub](https://github.com/LazyDom).*
+Follow me on [Medium](https://medium.com/@LazyDom) or [GitHub](https://github.com/LazyDom) for more updates.
