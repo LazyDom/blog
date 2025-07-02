@@ -1,6 +1,6 @@
 ---
 layout: default
-title: How to Install Minikube on WSL2: A Step-by-Step Guide
+title: "How to Install Minikube on WSL2: A Step-by-Step Guide"
 date: 2025-04-27
 medium_url: https://medium.com/@LazyDom/how-to-install-minikube-on-wsl2-a-step-by-step-guide-c843822744ac
 ---
