@@ -24,6 +24,11 @@
     <div id="content-wrapper">
       <div class="inner clearfix">
         <section id="main-content">
+          {% if page.medium_url %}
+            <a href="{{ page.medium_url }}" class="button medium-button" target="_blank" rel="noopener">
+              <small>Read on</small> Medium
+            </a>
+          {% endif %}
           {{ content }}
         </section>
         <aside id="sidebar">

@@ -1,0 +1,63 @@
+---
+---
+@import "{{ site.theme }}";
+
+// Custom overrides: Only keep what is truly needed beyond the official theme
+
+// Example: Custom footer link color (optional, remove if not needed)
+footer a {
+  color: #2879d0;
+  text-decoration: none;
+}
+footer a:hover, footer a:focus {
+  color: #2268b2;
+  text-decoration: none;
+}
+
+// Example: Custom site-footer style (optional, remove if not needed)
+.site-footer {
+  border-top: 1px solid #eaeaea;
+  margin-top: 3rem;
+  padding: 2rem 0 1rem 0;
+  color: #888;
+  font-size: 0.95rem;
+  background: #fff;
+}
+.site-footer a {
+  color: #2879d0;
+  text-decoration: none;
+}
+.site-footer a:hover, .site-footer a:focus {
+  color: #2268b2;
+  text-decoration: underline;
+}
+
+// Add styles for the Medium button to match the look and feel of the GitHub button, but with Medium's green color
+.medium-button {
+  display: inline-block;
+  margin-bottom: 1.5em;
+  margin-right: 1em;
+  background: #fff;
+  color: #02b875;
+  border: 1px solid #02b875;
+  border-radius: 3px;
+  padding: 0.4em 1.2em;
+  font-size: 1.1em;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+.medium-button:hover, .medium-button:focus {
+  background: #02b875;
+  color: #fff;
+  text-decoration: none;
+}
+.medium-button small {
+  display: block;
+  font-size: 0.7em;
+  font-weight: 400;
+  color: #888;
+  margin-bottom: -0.2em;
+}
+
+// If you want a pure Architect theme, you can remove all overrides above.
