@@ -1,0 +1,13 @@
+footer a {
+  color: #2879d0;
+  text-decoration: underline;
+}
+
+footer a:visited {
+  color: #2879d0;
+}
+
+footer a:hover, footer a:focus {
+  color: #0b0080;
+  text-decoration: underline;
+}
