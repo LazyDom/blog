@@ -1,0 +1,42 @@
+# GitHub Actions Workflow: Link and YAML Linting for Jekyll Blog
+
+# This workflow checks for broken links in Markdown files and lints YAML/front matter for errors.
+# It runs on every push and pull request to the main branch.
+
+name: Lint Markdown Links & YAML
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check for broken links in Markdown (lychee-action)
+        uses: lycheeverse/lychee-action@v1.10.0
+        with:
+          args: >-
+            --verbose
+            --no-progress
+            --exclude-path 'node_modules' --exclude-path '_site' --exclude-path '.git'
+            './**/*.md'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install yamllint
+        run: pip install yamllint
+
+      - name: Lint YAML files (including Jekyll front matter)
+        run: |
+          yamllint . --format colored --strict

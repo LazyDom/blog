@@ -1,3 +1,4 @@
 theme: jekyll-theme-architect
 baseurl: "/blog"
 excerpt_separator: "<!--more-->"
+permalink: /:title/
