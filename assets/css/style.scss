@@ -73,19 +73,23 @@ header .inner {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.75em;
+  gap: 1em;
 }
 header .button, header .medium-button {
   margin: 0;
+  padding: 0.4em 1.2em;
   position: static;
+  min-width: 0;
+  min-height: 0;
 }
 .button, .medium-button {
   display: inline-flex;
   align-items: center;
-  margin-right: 0.5em;
+  margin-right: 0;
   vertical-align: middle;
   position: static;
   z-index: auto;
+  line-height: 1.2;
 }
 .button svg, .medium-button svg {
   width: 1.2em;
@@ -93,6 +97,15 @@ header .button, header .medium-button {
   margin-right: 0.4em;
   vertical-align: middle;
   fill: currentColor;
+  flex-shrink: 0;
+}
+.button small, .medium-button small {
+  display: inline;
+  font-size: 0.7em;
+  font-weight: 400;
+  color: #888;
+  margin-bottom: 0;
+  margin-right: 0.3em;
 }
 
 // If you want a pure Architect theme, you can remove all overrides above.
