@@ -87,5 +87,12 @@ header .button, header .medium-button {
   position: static;
   z-index: auto;
 }
+.button svg, .medium-button svg {
+  width: 1.2em;
+  height: 1.2em;
+  margin-right: 0.4em;
+  vertical-align: middle;
+  fill: currentColor;
+}
 
 // If you want a pure Architect theme, you can remove all overrides above.
