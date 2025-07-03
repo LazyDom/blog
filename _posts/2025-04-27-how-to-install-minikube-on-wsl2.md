@@ -16,10 +16,6 @@ Minikube is a popular tool for running Kubernetes locally, and with the power of
 
 ---
 
-Minikube is a popular tool for running Kubernetes locally, and with the power of WSL2 (Windows Subsystem for Linux 2), you can set up a lightweight Kubernetes cluster on your Windows machine. This guide will walk you through the process of installing Minikube on WSL2.
-
-<!--more-->
-
 ## Step 1: Install Prerequisites
 
 ### 1. Install WSL2
