@@ -18,10 +18,9 @@
           <h1>{{ site.title | default: site.github.repository_name }}</h1>
         </a>
         <h2>{{ site.description | default: site.github.project_tagline }}</h2>
-        <a href="{{ site.github.repository_url }}" class="button">
-          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
-          <small>View project on</small> GitHub
-        </a>
+        {% if site.github.is_project_page %}
+          <a href="{{ site.github.repository_url }}" class="button"><small>View project on</small> GitHub</a>
+        {% endif %}
       </div>
     </header>
     <div id="content-wrapper">
@@ -30,12 +29,6 @@
           {{ content }}
         </section>
         <aside id="sidebar">
-          {% if page.medium_url %}
-            <a href="{{ page.medium_url }}" class="button medium-button" target="_blank" rel="noopener">
-              <svg viewBox="0 0 1043.63 592.71" aria-hidden="true"><g><path d="M588.67 296.14c0 163.57-131.98 296.14-294.33 296.14C131.98 592.28 0 459.71 0 296.14 0 132.57 131.98 0 294.33 0c162.35 0 294.33 132.57 294.33 296.14z" fill="#02b875"/><path d="M1043.63 296.14c0 154.19-66.1 279.13-147.65 279.13-81.55 0-147.65-124.94-147.65-279.13C748.33 141.95 814.43 17 896 17c81.55 0 147.63 124.95 147.63 279.14z" fill="#02b875"/><path d="M905.49 296.14c0 129.6-29.6 234.7-66.1 234.7-36.5 0-66.1-105.1-66.1-234.7 0-129.6 29.6-234.7 66.1-234.7 36.5 0 66.1 105.1 66.1 234.7z"/></g></svg>
-              <small>Read on</small> Medium
-            </a>
-          {% endif %}
           <!-- Sidebar content can go here if needed -->
         </aside>
       </div>
