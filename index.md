@@ -1,3 +1,7 @@
+---
+layout: default
+title: Home
+---
 # LazyDom's Blog
 
 Welcome to my personal blog repository! Here you’ll find my technical articles, guides, and notes in Markdown format.
