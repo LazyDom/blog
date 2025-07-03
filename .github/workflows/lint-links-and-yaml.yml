@@ -25,6 +25,7 @@ jobs:
             --verbose
             --no-progress
             --exclude-path 'node_modules' --exclude-path '_site' --exclude-path '.git'
+            --max-concurrency 2 --exclude 'github.com'
             './**/*.md'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
