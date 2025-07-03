@@ -32,6 +32,11 @@
           {{ content }}
         </section>
         <aside id="sidebar">
+          <div class="sidebar-section">
+            <h3>Search</h3>
+            <input type="text" id="search-input" placeholder="Search posts..." />
+            <ul id="results-container"></ul>
+          </div>
           <!-- Sidebar content can go here if needed -->
         </aside>
       </div>
@@ -47,5 +52,13 @@
       </div>
     </footer>
     <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js"></script>
+    <script>
+      SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        json: '{{ "/search.json" | relative_url }}'
+      });
+    </script>
   </body>
 </html>
