@@ -33,11 +33,15 @@ footer a:hover, footer a:focus {
 }
 
 // Add styles for the Medium button to match the look and feel of the GitHub button, but with Medium's green color
+.button {
+  display: inline-block;
+  margin-right: 0.5em;
+  vertical-align: middle;
+}
 .medium-button {
   display: inline-block;
   margin-bottom: 1.5em;
   margin-right: 1em;
-  background: #fff;
   color: #02b875;
   border: 1px solid #02b875;
   border-radius: 3px;
@@ -46,6 +50,11 @@ footer a:hover, footer a:focus {
   font-weight: 600;
   text-decoration: none;
   transition: background 0.2s, color 0.2s;
+  background: #fff;
+  margin-right: 0;
+  margin-left: 0;
+  margin-bottom: 0;
+  vertical-align: middle;
 }
 .medium-button:hover, .medium-button:focus {
   background: #02b875;
