@@ -2,27 +2,7 @@
 ---
 @import "{{ site.theme }}";
 
-// Custom overrides: Only keep what is truly needed beyond the official theme
-
-// Example: Custom footer link color (optional, remove if not needed)
-footer a {
-  color: #2879d0;
-  text-decoration: none;
-}
-footer a:hover, footer a:focus {
-  color: #2268b2;
-  text-decoration: none;
-}
-
-// Example: Custom site-footer style (optional, remove if not needed)
-.site-footer {
-  border-top: 1px solid #eaeaea;
-  margin-top: 3rem;
-  padding: 2rem 0 1rem 0;
-  color: #888;
-  font-size: 0.95rem;
-  background: #fff;
-}
+// Custom footer link color (optional, remove if not needed)
 .site-footer a {
   color: #2879d0;
   text-decoration: none;
@@ -32,51 +12,12 @@ footer a:hover, footer a:focus {
   text-decoration: underline;
 }
 
-// Remove all .medium-button styles and SVG overrides
-.button {
-  display: inline-block;
-  margin-right: 0.5em;
-  vertical-align: middle;
-}
-header .inner {
-  display: flex !important;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 1em;
-}
-header .inner > * {
-  margin: 0 !important;
-  padding: 0 !important;
-  line-height: 1.2;
-  align-self: center;
-}
-header h1, header h2 {
-  margin: 0 1em 0 0 !important;
-  padding: 0 !important;
-  font-size: 2em;
-  font-weight: 700;
-  align-self: center;
-}
-header h2 {
-  font-size: 1.1em;
-  font-weight: 400;
+// Custom site-footer style (optional, remove if not needed)
+.site-footer {
+  border-top: 1px solid #eaeaea;
+  margin-top: 3rem;
+  padding: 2rem 0 1rem 0;
   color: #888;
-}
-header .button {
+  font-size: 0.95rem;
   background: #fff;
-  border-radius: 3px;
-  border: 1px solid #eaeaea;
-  font-weight: 600;
-  text-decoration: none;
-  min-width: 0;
-  min-height: 0;
-  align-self: center;
 }
-header .button small {
-  font-size: 0.7em;
-  font-weight: 400;
-  color: #888;
-  margin-left: 0.2em;
-}
-
-// If you want a pure Architect theme, you can remove all overrides above.
