@@ -75,19 +75,35 @@ header .inner {
   align-items: center;
   gap: 1em;
 }
+header .inner > * {
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1.2;
+  align-self: center;
+}
+header h1, header h2 {
+  margin: 0 1em 0 0 !important;
+  padding: 0 !important;
+  font-size: 2em;
+  font-weight: 700;
+  align-self: center;
+}
+header h2 {
+  font-size: 1.1em;
+  font-weight: 400;
+  color: #888;
+}
 header .button, header .medium-button {
   display: inline-flex !important;
   align-items: center;
-  margin: 0 !important;
-  padding: 0.4em 1.2em !important;
-  position: static !important;
-  min-width: 0;
-  min-height: 0;
   background: #fff;
   border-radius: 3px;
   border: 1px solid #eaeaea;
   font-weight: 600;
   text-decoration: none;
+  min-width: 0;
+  min-height: 0;
+  align-self: center;
 }
 header .medium-button {
   color: #02b875;
