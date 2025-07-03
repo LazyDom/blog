@@ -70,28 +70,30 @@ footer a:hover, footer a:focus {
 }
 
 header .inner {
-  display: flex;
+  display: flex !important;
   flex-wrap: wrap;
   align-items: center;
   gap: 1em;
 }
 header .button, header .medium-button {
-  margin: 0;
-  padding: 0.4em 1.2em;
-  position: static;
+  display: inline-flex !important;
+  align-items: center;
+  margin: 0 !important;
+  padding: 0.4em 1.2em !important;
+  position: static !important;
   min-width: 0;
   min-height: 0;
+  background: #fff;
+  border-radius: 3px;
+  border: 1px solid #eaeaea;
+  font-weight: 600;
+  text-decoration: none;
 }
-.button, .medium-button {
-  display: inline-flex;
-  align-items: center;
-  margin-right: 0;
-  vertical-align: middle;
-  position: static;
-  z-index: auto;
-  line-height: 1.2;
+header .medium-button {
+  color: #02b875;
+  border-color: #02b875;
 }
-.button svg, .medium-button svg {
+header .button svg, header .medium-button svg {
   width: 1.2em;
   height: 1.2em;
   margin-right: 0.4em;
@@ -99,13 +101,11 @@ header .button, header .medium-button {
   fill: currentColor;
   flex-shrink: 0;
 }
-.button small, .medium-button small {
-  display: inline;
+header .button small, header .medium-button small {
   font-size: 0.7em;
   font-weight: 400;
   color: #888;
-  margin-bottom: 0;
-  margin-right: 0.3em;
+  margin-left: 0.2em;
 }
 
 // If you want a pure Architect theme, you can remove all overrides above.
