@@ -40,8 +40,6 @@ footer a:hover, footer a:focus {
 }
 .medium-button {
   display: inline-block;
-  margin-bottom: 1.5em;
-  margin-right: 1em;
   color: #02b875;
   border: 1px solid #02b875;
   border-radius: 3px;
@@ -51,9 +49,6 @@ footer a:hover, footer a:focus {
   text-decoration: none;
   transition: background 0.2s, color 0.2s;
   background: #fff;
-  margin-right: 0;
-  margin-left: 0;
-  margin-bottom: 0;
   vertical-align: middle;
 }
 .medium-button:hover, .medium-button:focus {
@@ -93,7 +88,7 @@ header h2 {
   font-weight: 400;
   color: #888;
 }
-header .button, header .medium-button {
+header .button {
   display: inline-flex !important;
   align-items: center;
   background: #fff;
@@ -105,11 +100,7 @@ header .button, header .medium-button {
   min-height: 0;
   align-self: center;
 }
-header .medium-button {
-  color: #02b875;
-  border-color: #02b875;
-}
-header .button svg, header .medium-button svg {
+header .button svg {
   width: 1.2em;
   height: 1.2em;
   margin-right: 0.4em;
@@ -117,7 +108,7 @@ header .button svg, header .medium-button svg {
   fill: currentColor;
   flex-shrink: 0;
 }
-header .button small, header .medium-button small {
+header .button small {
   font-size: 0.7em;
   font-weight: 400;
   color: #888;
