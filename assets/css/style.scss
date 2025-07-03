@@ -69,22 +69,23 @@ footer a:hover, footer a:focus {
   margin-bottom: -0.2em;
 }
 
-.header .inner {
+header .inner {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.5em;
+  gap: 0.75em;
 }
-.header .button, .header .medium-button {
-  margin-bottom: 0;
-  margin-top: 0;
+header .button, header .medium-button {
+  margin: 0;
+  position: static;
 }
 .button, .medium-button {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   margin-right: 0.5em;
   vertical-align: middle;
-  position: relative;
-  z-index: 1;
+  position: static;
+  z-index: auto;
 }
 
 // If you want a pure Architect theme, you can remove all overrides above.
