@@ -18,14 +18,26 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Check for broken links in Markdown (lychee-action)
+      - name: Check GitHub links only (lychee-action)
         uses: lycheeverse/lychee-action@v1.10.0
         with:
           args: >-
             --verbose
             --no-progress
             --exclude-path 'node_modules' --exclude-path '_site' --exclude-path '.git'
-            --max-concurrency 2 --exclude 'github.com'
+            --include 'github.com'
+            './**/*.md'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Check non-GitHub links with concurrency limit (lychee-action)
+        uses: lycheeverse/lychee-action@v1.10.0
+        with:
+          args: >-
+            --verbose
+            --no-progress
+            --exclude-path 'node_modules' --exclude-path '_site' --exclude-path '.git'
+            --exclude 'github.com' --max-concurrency 2
             './**/*.md'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
