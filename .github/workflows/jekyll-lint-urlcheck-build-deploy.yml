@@ -1,9 +1,6 @@
-# GitHub Actions Workflow: Link and YAML Linting for Jekyll Blog
+# GitHub Actions Workflow: Lint, URL Check, Build, and Deploy Jekyll Blog
 
-# This workflow checks for broken links in Markdown files and lints YAML/front matter for errors.
-# It runs on every push and pull request to the main branch.
-
-name: Lint Markdown Links & YAML
+name: Lint, URL Check, Build & Deploy Jekyll Blog
 
 on:
   push:
@@ -53,3 +50,30 @@ jobs:
       - name: Lint YAML files (including Jekyll front matter)
         run: |
           yamllint . --format colored --strict
+
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    needs: lint
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+
+      - name: Install dependencies
+        run: |
+          gem install bundler
+          bundle install
+
+      - name: Build Jekyll site
+        run: bundle exec jekyll build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
