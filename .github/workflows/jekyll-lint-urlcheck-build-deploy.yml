@@ -12,7 +12,7 @@ permissions:
   contents: read
 
 jobs:
-  lint:
+  lint-and-linkcheck:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -24,6 +24,7 @@ jobs:
           args: >-
             --verbose
             --no-progress
+            --fail
             --exclude-path 'node_modules' --exclude-path '_site' --exclude-path '.git'
             --include 'github.com'
             './**/*.md'
@@ -36,6 +37,7 @@ jobs:
           args: >-
             --verbose
             --no-progress
+            --fail
             --exclude-path 'node_modules' --exclude-path '_site' --exclude-path '.git'
             --exclude 'github.com' --max-concurrency 2
             './**/*.md'
@@ -56,7 +58,7 @@ jobs:
 
   build-and-deploy:
     runs-on: ubuntu-latest
-    needs: lint
+    needs: lint-and-linkcheck
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     permissions:
       contents: write
@@ -83,6 +85,7 @@ jobs:
           args: >-
             --verbose
             --no-progress
+            --fail
             --include 'github.com'
             './_site/**/*.html'
         env:
@@ -94,6 +97,7 @@ jobs:
           args: >-
             --verbose
             --no-progress
+            --fail
             --exclude 'github.com' --max-concurrency 2
             './_site/**/*.html'
         env:
