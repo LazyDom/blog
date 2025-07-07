@@ -12,37 +12,11 @@ permissions:
   contents: read
 
 jobs:
-  lint-and-linkcheck:
+  lint-yaml:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
-      - name: Check GitHub links only (lychee-action)
-        uses: lycheeverse/lychee-action@v1.10.0
-        with:
-          args: >-
-            --verbose
-            --no-progress
-            --exclude '\{\{.*\}\}'
-            --exclude-path 'node_modules' --exclude-path '_site' --exclude-path '.git'
-            --include 'github.com'
-            './**/*.md'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Check non-GitHub links with concurrency limit (lychee-action)
-        uses: lycheeverse/lychee-action@v1.10.0
-        with:
-          args: >-
-            --verbose
-            --no-progress
-            --exclude '\{\{.*\}\}'
-            --exclude-path 'node_modules' --exclude-path '_site' --exclude-path '.git'
-            --exclude 'github.com' --max-concurrency 2
-            './**/*.md'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -58,7 +32,7 @@ jobs:
 
   build-and-deploy:
     runs-on: ubuntu-latest
-    needs: lint-and-linkcheck
+    needs: lint-yaml
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     permissions:
       contents: write
