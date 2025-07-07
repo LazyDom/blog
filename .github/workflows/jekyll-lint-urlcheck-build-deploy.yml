@@ -77,6 +77,28 @@ jobs:
       - name: Build Jekyll site
         run: bundle exec jekyll build
 
+      - name: Check GitHub links in built site (lychee-action)
+        uses: lycheeverse/lychee-action@v1.10.0
+        with:
+          args: >-
+            --verbose
+            --no-progress
+            --include 'github.com'
+            './_site/**/*.html'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Check non-GitHub links in built site (lychee-action)
+        uses: lycheeverse/lychee-action@v1.10.0
+        with:
+          args: >-
+            --verbose
+            --no-progress
+            --exclude 'github.com' --max-concurrency 2
+            './_site/**/*.html'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
