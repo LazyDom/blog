@@ -10,7 +10,5 @@ updates:
       prefix: "chore(deps)"
     labels:
       - "dependencies"
-    reviewers:
-      - "LazyDom"
     assignees:
       - "LazyDom"
