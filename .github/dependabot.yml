@@ -1,0 +1,16 @@
+# See: https://github.com/lycheeverse/lychee-action#security-and-updates
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "chore(deps)"
+    labels:
+      - "dependencies"
+    reviewers:
+      - "LazyDom"
+    assignees:
+      - "LazyDom"
