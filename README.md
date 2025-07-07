@@ -1,10 +1,8 @@
 # LazyDom's Blog
 
-Welcome to my personal blog repository! Here you’ll find my technical articles, guides, and notes in Markdown format.
-
-# Link Checker Status
-# See: https://github.com/lycheeverse/lychee-action#fancy-badge
 [![Link Checker](https://github.com/${{ github.repository }}/actions/workflows/jekyll-lint-urlcheck-build-deploy.yml/badge.svg?branch=main)](https://github.com/${{ github.repository }}/actions/workflows/jekyll-lint-urlcheck-build-deploy.yml)
+
+Welcome to my personal blog repository! Here you’ll find my technical articles, guides, and notes in Markdown format.
 
 ## Posts
 
