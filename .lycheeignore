@@ -1,0 +1,4 @@
+# Ignore root-relative links that lychee cannot check
+^/blog/
+^/assets/
+^/images/
