@@ -36,11 +36,11 @@ jobs:
       - name: Check GitHub links in built site (lychee-action)
         uses: lycheeverse/lychee-action@v2.4.1
         with:
+          output: lychee-github-links-output.json
           args: >-
             --verbose
             --no-progress
             --include 'github.com'
-            --output lychee-github-links-output.json
             './_site/**/*.html'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -54,11 +54,11 @@ jobs:
       - name: Check non-GitHub links in built site (lychee-action)
         uses: lycheeverse/lychee-action@v2.4.1
         with:
+          output: lychee-non-github-links-output.json
           args: >-
             --verbose
             --no-progress
             --exclude 'github.com' --max-concurrency 2
-            --output lychee-non-github-links-output.json
             './_site/**/*.html'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

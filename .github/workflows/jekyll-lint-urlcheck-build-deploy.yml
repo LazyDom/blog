@@ -52,7 +52,7 @@ jobs:
         run: bundle exec jekyll build
 
       - name: Check GitHub links in built site (lychee-action)
-        uses: lycheeverse/lychee-action@v1.10.0
+        uses: lycheeverse/lychee-action@v2.4.1
         with:
           args: >-
             --verbose
@@ -63,7 +63,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Check non-GitHub links in built site (lychee-action)
-        uses: lycheeverse/lychee-action@v1.10.0
+        uses: lycheeverse/lychee-action@v2.4.1
         with:
           args: >-
             --verbose
