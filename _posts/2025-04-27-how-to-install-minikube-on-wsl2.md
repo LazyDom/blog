@@ -28,7 +28,7 @@ wsl --list --verbose
 
 *Windows Terminal Output should look like this:*
 
-![WSL2 List Output](/blog/images/wsl2-list-output.png)
+![WSL2 List Output](images/wsl2-list-output.png)
 
 If WSL2 is not installed, follow the [Microsoft WSL2 installation guide](https://learn.microsoft.com/en-us/windows/wsl/install).
 
@@ -127,7 +127,7 @@ minikube start --driver=docker
 
 *Bash Output for the above command:*
 
-![Minikube Start Output](/blog/images/minikube-start-output.png)
+![Minikube Start Output](images/minikube-start-output.png)
 
 ### 2. Verify Minikube is Running
 
@@ -139,7 +139,7 @@ minikube status
 
 *Bash Output for the above command:*
 
-![Minikube Status Output](/blog/images/minikube-status-output.png)
+![Minikube Status Output](images/minikube-status-output.png)
 
 ---
 
@@ -175,7 +175,7 @@ kubectl version --client
 
 *Bash Output for the above command:*
 
-![Kubectl Version Output](/blog/images/kubectl-version-output.png)
+![Kubectl Version Output](images/kubectl-version-output.png)
 
 #### Updating `kubectl`
 
