@@ -1,6 +1,6 @@
 # LazyDom's Blog
 
-[![Link Checker](https://github.com/LazyDom/blog/actions/workflows/jekyll-lint-urlcheck-build-deploy.yml/badge.svg?branch=main)](https://github.com/LazyDom/blog/actions/workflows/jekyll-lint-urlcheck-build-deploy.yml)
+[![Link Check](https://github.com/LazyDom/blog/actions/workflows/link-check.yml/badge.svg?branch=main)](https://github.com/LazyDom/blog/actions/workflows/link-check.yml)
 
 Welcome to my personal blog repository! Here you’ll find my technical articles, guides, and notes in Markdown format.
 
