@@ -8,9 +8,13 @@ Welcome to my personal blog repository! Here you’ll find my technical articles
 
 ## Posts
 
-- [How to Install Minikube on WSL2]({% post_url 2025-04-27-how-to-install-minikube-on-wsl2 %}) - April 27, 2025
-
-<!-- Add more posts as you write them -->
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a> - {{ post.date | date: "%B %d, %Y" }}
+    </li>
+  {% endfor %}
+</ul>
 
 ## About
 
