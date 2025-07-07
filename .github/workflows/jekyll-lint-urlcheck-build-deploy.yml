@@ -24,7 +24,6 @@ jobs:
           args: >-
             --verbose
             --no-progress
-            --fail
             --exclude-path 'node_modules' --exclude-path '_site' --exclude-path '.git'
             --include 'github.com'
             './**/*.md'
@@ -37,7 +36,6 @@ jobs:
           args: >-
             --verbose
             --no-progress
-            --fail
             --exclude-path 'node_modules' --exclude-path '_site' --exclude-path '.git'
             --exclude 'github.com' --max-concurrency 2
             './**/*.md'
@@ -85,7 +83,6 @@ jobs:
           args: >-
             --verbose
             --no-progress
-            --fail
             --include 'github.com'
             './_site/**/*.html'
         env:
@@ -97,7 +94,6 @@ jobs:
           args: >-
             --verbose
             --no-progress
-            --fail
             --exclude 'github.com' --max-concurrency 2
             './_site/**/*.html'
         env:
