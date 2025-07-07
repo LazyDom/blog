@@ -8,14 +8,10 @@ Welcome to my personal blog repository! Here you’ll find my technical articles
 
 ## Posts
 
-<ul class="post-list">
+<ul>
   {% for post in site.posts %}
-    <li class="post-item">
-      <a class="post-link" href="{{ site.baseurl }}{{ post.url }}"><strong>{{ post.title }}</strong></a>
-      <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
-      {% if post.excerpt %}
-        <div class="post-excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</div>
-      {% endif %}
+    <li>
+      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> - {{ post.date | date: "%B %d, %Y" }}
     </li>
   {% endfor %}
 </ul>
