@@ -24,6 +24,7 @@ jobs:
           args: >-
             --verbose
             --no-progress
+            --exclude '\{\{.*\}\}'
             --exclude-path 'node_modules' --exclude-path '_site' --exclude-path '.git'
             --include 'github.com'
             './**/*.md'
@@ -36,6 +37,7 @@ jobs:
           args: >-
             --verbose
             --no-progress
+            --exclude '\{\{.*\}\}'
             --exclude-path 'node_modules' --exclude-path '_site' --exclude-path '.git'
             --exclude 'github.com' --max-concurrency 2
             './**/*.md'
