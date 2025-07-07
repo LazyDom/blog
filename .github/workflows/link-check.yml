@@ -41,6 +41,9 @@ jobs:
             --verbose
             --no-progress
             --include 'github.com'
+            --exclude '/blog/'
+            --exclude '/assets/'
+            --exclude '/images/'
             './_site/**/*.html'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -59,6 +62,9 @@ jobs:
             --verbose
             --no-progress
             --exclude 'github.com' --max-concurrency 2
+            --exclude '/blog/'
+            --exclude '/assets/'
+            --exclude '/images/'
             './_site/**/*.html'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
