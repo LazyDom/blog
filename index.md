@@ -23,4 +23,7 @@ Feel free to browse, suggest edits, or contribute!
 
 ---
 
-Follow me on [Medium](https://medium.com/@LazyDom) or [GitHub](https://github.com/LazyDom) for more updates.
+Follow me on
+[![Medium]({{ site.baseurl }}/assets/images/medium-button.png)](https://medium.com/@LazyDom)
+[![GitHub]({{ site.baseurl }}/assets/images/github-mark.png)](https://github.com/LazyDom)
+for more updates.
