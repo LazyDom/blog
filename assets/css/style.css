@@ -1128,4 +1128,21 @@ footer a:hover {
   background: #fff;
 }
 
+.button.medium {
+  background: url("/blog/assets/images/medium-button.png") no-repeat left center;
+  background-size: 20px 20px;
+  padding-left: 28px;
+  line-height: 24px;
+  color: #fff;
+  background-color: #00ab6c;
+  border-radius: 4px;
+  border: none;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.button.medium:hover {
+  background-color: #008f5a;
+}
+
 /*# sourceMappingURL=style.css.map */
