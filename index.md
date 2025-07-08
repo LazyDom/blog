@@ -24,10 +24,6 @@ Feel free to browse, suggest edits, or contribute!
 ---
 
 Follow me on 
-<a href="https://medium.com/@LazyDom" target="_blank" rel="noopener">
-  <img src="{{ site.baseurl }}/assets/images/medium-button.png" alt="Medium">
-</a>
-<a href="https://github.com/LazyDom" target="_blank" rel="noopener">
-  <img src="{{ site.baseurl }}/assets/images/github-mark.png" alt="GitHub">
-</a>
+<a href="https://medium.com/@LazyDom" target="_blank" rel="noopener" class="button medium">Medium</a>
+<a href="https://github.com/LazyDom" target="_blank" rel="noopener" class="button">GitHub</a>
 for more updates.
