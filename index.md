@@ -1,6 +1,6 @@
 ---
-layout: default
 title: Home
+layout: default
 ---
 # LazyDom's Blog
 
@@ -24,6 +24,8 @@ Feel free to browse, suggest edits, or contribute!
 ---
 
 Follow me on
-[![Medium](/blog/assets/images/medium-button.png)](https://medium.com/@LazyDom)
-[![GitHub](/blog/assets/images/github-mark.png)](https://github.com/LazyDom)
+![](/blog/assets/images/medium-button.png)
+[Medium](https://medium.com/@LazyDom)
+![](/blog/assets/images/github-mark.png)
+[GitHub](https://github.com/LazyDom)
 for more updates.
