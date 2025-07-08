@@ -23,7 +23,11 @@ Feel free to browse, suggest edits, or contribute!
 
 ---
 
-Follow me on 
-<img src="/blog/assets/images/medium-button.png" alt="Medium" height="24">
-<img src="/blog/assets/images/github-mark.png" alt="GitHub" height="24">
+Follow me on
+<a href="https://medium.com/@LazyDom" target="_blank" rel="noopener">
+  <img src="/blog/assets/images/medium-button.png" alt="Medium" height="24">
+</a>
+<a href="https://github.com/LazyDom" target="_blank" rel="noopener">
+  <img src="/blog/assets/images/github-mark.png" alt="GitHub" height="24">
+</a>
 for more updates.
