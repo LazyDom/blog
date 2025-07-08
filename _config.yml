@@ -1,4 +1,4 @@
-theme: jekyll-theme-architect
+theme: minima
 baseurl: "/blog"
 excerpt_separator: "<!--more-->"
 permalink: /:title/
