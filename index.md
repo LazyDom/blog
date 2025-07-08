@@ -24,8 +24,8 @@ Feel free to browse, suggest edits, or contribute!
 ---
 
 Follow me on
-![](/blog/assets/images/medium-button.png)
+![]({{ '/assets/images/medium-button.png' | relative_url }})
 [Medium](https://medium.com/@LazyDom)
-![](/blog/assets/images/github-mark.png)
+![]({{ '/assets/images/github-mark.png' | relative_url }})
 [GitHub](https://github.com/LazyDom)
 for more updates.
