@@ -16,14 +16,14 @@ Welcome to my personal blog repository! Here you’ll find my technical articles
   {% endfor %}
 </ul>
 
-### About
+## About
 
 I write about Security, Home Automations, IOT, DevOps, Kubernetes, and other tech topics.  
 Feel free to browse, suggest edits, or contribute!
 
 ---
 
-#### Follow me on
+#### Follow me on:
 <div class="social-icons-row">
   <a href="https://medium.com/@LazyDom" target="_blank" rel="noopener" title="Medium" class="social-icon-link">
     <img src="{{ '/assets/images/medium-button.svg' | relative_url }}" alt="Medium" />
