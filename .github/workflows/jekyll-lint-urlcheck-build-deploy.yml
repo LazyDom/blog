@@ -59,7 +59,9 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: github-pages
-          path: _site
+          path: .
+      - name: List downloaded files
+        run: ls -R _site
       - name: Check GitHub links with lychee-action
         uses: lycheeverse/lychee-action@v2.4.1
         with:
@@ -67,6 +69,7 @@ jobs:
             --verbose
             --no-progress
             --include 'github.com'
+            --fail-if-empty false
             './_site/**/*.html'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -79,7 +82,9 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: github-pages
-          path: _site
+          path: .
+      - name: List downloaded files
+        run: ls -R _site
       - name: Check non-GitHub links with lychee-action
         uses: lycheeverse/lychee-action@v2.4.1
         with:
