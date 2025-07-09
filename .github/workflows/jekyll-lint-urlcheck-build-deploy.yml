@@ -48,20 +48,6 @@ jobs:
         env:
           JEKYLL_ENV: production
           PAGES_REPO_NWO: ${{ github.repository }}
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-
-  linkcheck-github:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: github-pages
-          path: _site
-      - name: List downloaded files
-        run: ls -R _site
       - name: Check GitHub links with lychee-action
         uses: lycheeverse/lychee-action@v2.4.1
         with:
@@ -69,22 +55,9 @@ jobs:
             --verbose
             --no-progress
             --include 'github.com'
-            --fail-if-empty false
             './_site/**/*.html'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  linkcheck-external:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: github-pages
-          path: _site
-      - name: List downloaded files
-        run: ls -R _site
       - name: Check non-GitHub links with lychee-action
         uses: lycheeverse/lychee-action@v2.4.1
         with:
@@ -95,13 +68,15 @@ jobs:
             './_site/**/*.html'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
 
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    needs: [linkcheck-github, linkcheck-external]
+    needs: build
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
