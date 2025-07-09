@@ -74,6 +74,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: List _site contents for debug
+        run: |
+          echo "Listing contents of _site before deploy:"
+          ls -lR ./_site
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
