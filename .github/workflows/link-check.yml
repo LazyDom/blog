@@ -1,5 +1,5 @@
 # Link Check Only
-# This workflow runs lychee link checking on the built Jekyll site only.
+# This workflow builds the Jekyll site and runs lychee link checking on the built output.
 # See: https://github.com/lycheeverse/lychee-action
 
 name: Links
@@ -9,34 +9,28 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+  workflow_dispatch:
 
-permissions:
-  contents: read
+concurrency:
+  group: "pages-linkcheck"
+  cancel-in-progress: false
 
 jobs:
-  link-check:
+  build-linkcheck:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '3.1'
-
-      - name: Install dependencies
-        run: |
-          gem install bundler
-          bundle install
-
-      - name: Build Jekyll site
-        run: bundle exec jekyll build
-
-      - name: Check GitHub links in built site (lychee-action)
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+      - name: Build with Jekyll (GitHub Pages)
+        uses: actions/jekyll-build-pages@v1.0.13
+      - name: Check GitHub links with lychee-action
         uses: lycheeverse/lychee-action@v2.4.1
         with:
-          output: lychee-github-links-output.json
           args: >-
             --verbose
             --no-progress
@@ -44,17 +38,9 @@ jobs:
             './_site/**/*.html'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Upload GitHub links lychee output
-        uses: actions/upload-artifact@v4
-        with:
-          name: lychee-github-links-output
-          path: lychee-github-links-output.json
-
-      - name: Check non-GitHub links in built site (lychee-action)
+      - name: Check non-GitHub links with lychee-action
         uses: lycheeverse/lychee-action@v2.4.1
         with:
-          output: lychee-non-github-links-output.json
           args: >-
             --verbose
             --no-progress
@@ -62,9 +48,3 @@ jobs:
             './_site/**/*.html'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Upload non-GitHub links lychee output
-        uses: actions/upload-artifact@v4
-        with:
-          name: lychee-non-github-links-output
-          path: lychee-non-github-links-output.json
