@@ -16,7 +16,7 @@ Welcome to my personal blog repository! Here you’ll find my technical articles
   {% endfor %}
 </ul>
 
-## About
+### About
 
 I write about Security, Home Automations, IOT, DevOps, Kubernetes, and other tech topics.  
 Feel free to browse, suggest edits, or contribute!
