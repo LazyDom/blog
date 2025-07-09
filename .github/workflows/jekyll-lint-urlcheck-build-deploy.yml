@@ -1,5 +1,4 @@
-# Sample workflow for building and deploying a Jekyll site to GitHub Pages
-name: Deploy Jekyll site to Pages
+name: jekyll-lint-build-urlcheck-deploy
 
 on:
   push:
