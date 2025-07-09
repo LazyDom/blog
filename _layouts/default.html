@@ -12,6 +12,7 @@
     <![endif]-->
   </head>
   <body>
+    {% assign baseurl_slash = site.baseurl | append: '/' %}
     <header>
       <div class="inner">
         <a href="{{ '/' | relative_url }}">
@@ -37,6 +38,19 @@
             <input type="text" id="search-input" placeholder="Search posts..." />
             <ul id="results-container"></ul>
           </div>
+          {% unless page.url == '/' or page.url == site.baseurl or page.url == baseurl_slash %}
+          <div class="sidebar-section">
+            <h3>Follow me on:</h3>
+            <div class="social-icons-row">
+              <a href="https://medium.com/@LazyDom" target="_blank" rel="noopener" title="Medium" class="social-icon-link">
+                <img src="{{ '/assets/images/medium-button.svg' | relative_url }}" alt="Medium" />
+              </a>
+              <a href="https://github.com/LazyDom" target="_blank" rel="noopener" title="GitHub" class="social-icon-link">
+                <img src="{{ '/assets/images/github-mark.svg' | relative_url }}" alt="GitHub" />
+              </a>
+            </div>
+          </div>
+          {% endunless %}
           <!-- Sidebar content can go here if needed -->
         </aside>
       </div>

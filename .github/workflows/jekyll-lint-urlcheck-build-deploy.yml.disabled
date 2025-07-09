@@ -1,3 +1,4 @@
+# Workflow disabled by renaming the file. To re-enable, rename back to .yml extension.
 name: Lint, URL Check, Build & Deploy Jekyll Blog
 
 on:

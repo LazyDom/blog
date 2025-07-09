@@ -21,3 +21,57 @@
   font-size: 0.95rem;
   background: #fff;
 }
+
+// Social icons row
+:root {
+  --social-icon-size: 28px;
+  --social-icon-gap: 8px;
+  --social-icon-bg: #fff;
+  --social-icon-shadow: 0 1px 2px #0001;
+  --social-icon-radius: 6px;
+  --social-icon-hover-scale: 1.1;
+}
+
+.social-icons-row {
+  display: flex;
+  align-items: center;
+  gap: var(--social-icon-gap);
+  margin: 12px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--social-icon-radius);
+  transition: box-shadow 0.2s, background 0.2s;
+  outline: none;
+}
+
+.social-icon-link:focus-visible {
+  box-shadow: 0 0 0 2px #2879d0;
+  background: #eaf3fb;
+}
+
+.social-icon-link img {
+  height: var(--social-icon-size);
+  width: var(--social-icon-size);
+  background: var(--social-icon-bg);
+  border-radius: var(--social-icon-radius);
+  padding: 2px;
+  object-fit: contain;
+  vertical-align: middle;
+  box-shadow: var(--social-icon-shadow);
+  transition: transform 0.2s;
+}
+
+.social-icon-link:hover img,
+.social-icon-link:focus-visible img {
+  transform: scale(var(--social-icon-hover-scale));
+}
+
+// Responsive tweak: shrink icons in sidebar if needed
+.sidebar .social-icons-row .social-icon-link img {
+  height: 22px;
+}

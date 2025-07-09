@@ -23,9 +23,12 @@ Feel free to browse, suggest edits, or contribute!
 
 ---
 
-Follow me on
-![]({{ '/assets/images/medium-button.png' | relative_url }})
-[Medium](https://medium.com/@LazyDom)
-![]({{ '/assets/images/github-mark.png' | relative_url }})
-[GitHub](https://github.com/LazyDom)
-for more updates.
+#### Follow me on:
+<div class="social-icons-row">
+  <a href="https://medium.com/@LazyDom" target="_blank" rel="noopener" title="Medium" class="social-icon-link">
+    <img src="{{ '/assets/images/medium-button.svg' | relative_url }}" alt="Medium" />
+  </a>
+  <a href="https://github.com/LazyDom" target="_blank" rel="noopener" title="GitHub" class="social-icon-link">
+    <img src="{{ '/assets/images/github-mark.svg' | relative_url }}" alt="GitHub" />
+  </a>
+</div>
