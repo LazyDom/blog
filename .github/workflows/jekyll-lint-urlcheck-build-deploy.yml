@@ -79,6 +79,11 @@ jobs:
           echo "Listing contents of _site before deploy:"
           ls -lR ./_site
 
+      - name: Grep for 'Follow me on' in built index.html
+        run: |
+          echo "Grep output for 'Follow me on' in _site/index.html:"
+          grep 'Follow me on' ./_site/index.html || true
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
