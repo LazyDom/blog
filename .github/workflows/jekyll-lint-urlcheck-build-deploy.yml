@@ -59,7 +59,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: github-pages
-          path: .
+          path: _site
       - name: List downloaded files
         run: ls -R _site
       - name: Check GitHub links with lychee-action
@@ -82,7 +82,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: github-pages
-          path: .
+          path: _site
       - name: List downloaded files
         run: ls -R _site
       - name: Check non-GitHub links with lychee-action
