@@ -1,0 +1,18 @@
+<div class="social-icons-row share-links-row">
+  <span class="share-label">Share on:</span>
+  <a class="social-icon-link" href="mailto:?subject={{ page.title | uri_escape }}&body={{ page.url | absolute_url }}" target="_blank" rel="noopener" title="Share by Email">
+    <img src="{{ '/assets/images/mailto-button.svg' | relative_url }}" alt="Email" />
+  </a>
+  <a class="social-icon-link" href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}" target="_blank" rel="noopener" title="Share on Facebook">
+    <img src="{{ '/assets/images/facebook-button.svg' | relative_url }}" alt="Facebook" />
+  </a>
+  <a class="social-icon-link" href="https://www.linkedin.com/shareArticle?mini=true&url={{ page.url | absolute_url }}&title={{ page.title | uri_escape }}" target="_blank" rel="noopener" title="Share on LinkedIn">
+    <img src="{{ '/assets/images/linkedin-button.svg' | relative_url }}" alt="LinkedIn" />
+  </a>
+  <a class="social-icon-link" href="https://x.com/intent/tweet?url={{ page.url | absolute_url }}&text={{ page.title | uri_escape }}" target="_blank" rel="noopener" title="Share on Twitter">
+    <img src="{{ '/assets/images/x-button.svg' | relative_url }}" alt="Twitter" />
+  </a>
+  <a class="social-icon-link" href="https://wa.me/?text={{ page.title | uri_escape }}%20{{ page.url | absolute_url }}" target="_blank" rel="noopener" title="Share on WhatsApp">
+    <img src="{{ '/assets/images/whatsapp-button.svg' | relative_url }}" alt="WhatsApp" />
+  </a>
+</div>

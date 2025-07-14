@@ -26,6 +26,10 @@
       <div class="inner clearfix">
         <section id="main-content">
           {{ content }}
+          {% include share-links.html %}
+          {% if page.medium_url %}
+            {% include medium-link.html url=page.medium_url %}
+          {% endif %}
         </section>
         <aside id="sidebar">
           <div class="sidebar-section">

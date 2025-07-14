@@ -1,34 +1,22 @@
 ---
 title: Home
 layout: default
+description: Welcome to LazyDom.xyz – DevSecOps engineer, security evangelist, and home automation geek.
+tagline: Welcome to my personal site and blog!
+
 ---
-# LazyDom's Blog
 
-Welcome to my personal blog repository! Here you’ll find my technical articles, guides, and notes in Markdown format.
+## About Me
 
-## Posts
+I'm a DevSecOps Engineer, Security Evangelist and Home Automation Geek. I love tinkering with new tech and sharing what I learn.
 
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> - {{ post.date | date: "%B %d, %Y" }}
-    </li>
-  {% endfor %}
-</ul>
+## LazyDom's Blog
 
-## About
+Welcome to my personal blog about Security, Home Automation, IOT, DevOps, Kubernetes and more! Here you’ll find my technical articles, guides, and notes.
 
-I write about Security, Home Automations, IOT, DevOps, Kubernetes, and other tech topics.  
-Feel free to browse, suggest edits, or contribute!
+[Go to the Blog &rarr;]({{ '/blog/' | relative_url }})
 
 ---
 
 #### Follow me on:
-<div class="social-icons-row">
-  <a href="https://medium.com/@LazyDom" target="_blank" rel="noopener" title="Medium" class="social-icon-link">
-    <img src="{{ '/assets/images/medium-button.svg' | relative_url }}" alt="Medium" />
-  </a>
-  <a href="https://github.com/LazyDom" target="_blank" rel="noopener" title="GitHub" class="social-icon-link">
-    <img src="{{ '/assets/images/github-mark.svg' | relative_url }}" alt="GitHub" />
-  </a>
-</div>
+{% include social-icons.html %}

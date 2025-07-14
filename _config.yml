@@ -1,9 +1,9 @@
 theme: jekyll-theme-architect
 baseurl: ""
 excerpt_separator: "<!--more-->"
-permalink: /:title/
-title: LazyDom's Blog
-description: My personal blog about Security, Home Automation, IOT, DevOps, Kubernetes, and more.
+permalink: /blog/:title/
+title: LazyDom
+description: Security, automation, and tech guides by LazyDom.
 github:
   repository_url: https://github.com/LazyDom/blog
   owner_url: https://github.com/LazyDom
