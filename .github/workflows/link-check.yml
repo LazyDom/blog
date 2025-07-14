@@ -35,7 +35,6 @@ jobs:
             --verbose
             --no-progress
             --exclude '(github)\\.com'
-            --dump
             './_site/**/*.html'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -46,7 +45,6 @@ jobs:
             --verbose
             --no-progress
             --exclude '(github|x)\\.com' --max-concurrency 2
-            --dump
             './_site/**/*.html'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
