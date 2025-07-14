@@ -34,7 +34,7 @@ jobs:
           args: >-
             --verbose
             --no-progress
-            --exclude '(github)\\.com'
+            --exclude '(github|x)\\.com'
             './_site/**/*.html'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
