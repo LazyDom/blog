@@ -47,7 +47,7 @@ jobs:
           args: >-
             --verbose
             --no-progress
-            --exclude '(github|x)\\.com'
+            --exclude github.com --exclude x.com
             './_site/**/*.html'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -57,7 +57,7 @@ jobs:
           args: >-
             --verbose
             --no-progress
-            --exclude '(github|x)\\.com' --max-concurrency 2
+            --exclude github.com --exclude x.com --max-concurrency 2
             './_site/**/*.html'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
