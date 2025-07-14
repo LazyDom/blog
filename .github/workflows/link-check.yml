@@ -34,8 +34,8 @@ jobs:
           args: >-
             --verbose
             --no-progress
-            --user-agent "Mozilla/5.0 (compatible; LazyDomBot/1.0)"
             --include 'github.com'
+            --dump
             './_site/**/*.html'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -45,8 +45,8 @@ jobs:
           args: >-
             --verbose
             --no-progress
-            --user-agent "Mozilla/5.0 (compatible; LazyDomBot/1.0)"
             --exclude 'github.com' --max-concurrency 2
+            --dump
             './_site/**/*.html'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
