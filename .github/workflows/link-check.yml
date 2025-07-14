@@ -34,6 +34,7 @@ jobs:
           args: >-
             --verbose
             --no-progress
+            --user-agent "Mozilla/5.0 (compatible; LazyDomBot/1.0)"
             --include 'github.com'
             './_site/**/*.html'
         env:
@@ -44,6 +45,7 @@ jobs:
           args: >-
             --verbose
             --no-progress
+            --user-agent "Mozilla/5.0 (compatible; LazyDomBot/1.0)"
             --exclude 'github.com' --max-concurrency 2
             './_site/**/*.html'
         env:
