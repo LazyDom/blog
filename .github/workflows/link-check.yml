@@ -34,7 +34,7 @@ jobs:
           args: >-
             --verbose
             --no-progress
-            --include 'github.com'
+            --exclude '(github)\\.com'
             --dump
             './_site/**/*.html'
         env:
@@ -45,7 +45,7 @@ jobs:
           args: >-
             --verbose
             --no-progress
-            --exclude 'github.com' --max-concurrency 2
+            --exclude '(github|x)\\.com' --max-concurrency 2
             --dump
             './_site/**/*.html'
         env:
