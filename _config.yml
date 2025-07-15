@@ -1,5 +1,5 @@
 theme: jekyll-theme-architect
-baseurl: "/blog"
+baseurl: ""
 excerpt_separator: "<!--more-->"
 permalink: /blog/:title/
 title: LazyDom
