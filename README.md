@@ -2,7 +2,8 @@
 
 [![Links](https://github.com/LazyDom/blog/actions/workflows/link-check.yml/badge.svg?branch=main)](https://github.com/LazyDom/blog/actions/workflows/link-check.yml)
 
-Welcome to my personal blog repository! Here you’ll find my technical articles, guides, and notes in Markdown format.
+Welcome to my personal blog about Security, Home Automation, IOT, DevOps, Kubernetes and more!  
+I’m a DevSecOps Engineer, Security Evangelist, and Home Automation Geek. I love tinkering with new tech and sharing what I learn.
 
 ## Posts
 
@@ -10,11 +11,9 @@ Welcome to my personal blog repository! Here you’ll find my technical articles
 
 <!-- Add more posts as you write them -->
 
-## About
-
-I write about Security, Home Automations, IOT, DevOps, Kubernetes, and other tech topics.  
-Feel free to browse, suggest edits, or contribute!
-
 ---
 
-Follow me on [Medium](https://medium.com/@LazyDom) or [GitHub](https://github.com/LazyDom) for more updates.
+**Follow me:**  
+- [GitHub](https://github.com/LazyDom)  
+- [Medium](https://medium.com/@LazyDom)  
+- [X.com](https://x.com/lazyd0m)
