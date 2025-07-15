@@ -16,4 +16,4 @@ I’m a DevSecOps Engineer, Security Evangelist, and Home Automation Geek. I lov
 **Follow me:**  
 - [GitHub](https://github.com/LazyDom)  
 - [Medium](https://medium.com/@LazyDom)  
-- [X.com](https://x.com/lazyd0m)
+- [X (formerly Twitter)](https://x.com/lazyd0m)
