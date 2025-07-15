@@ -7,7 +7,7 @@ I’m a DevSecOps Engineer, Security Evangelist, and Home Automation Geek. I lov
 
 ## Posts
 
-- [How to Install Minikube on WSL2](https://lazydom.github.io/blog/how-to-install-minikube-on-wsl2/) - April 27, 2025
+- [How to Install Minikube on WSL2](https://lazydom.github.io/blog/blog/how-to-install-minikube-on-wsl2/) - April 27, 2025
 
 <!-- Add more posts as you write them -->
 
