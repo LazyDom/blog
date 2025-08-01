@@ -1,0 +1,27 @@
+{% assign baseurl_slash = site.baseurl | append: '/' %}
+<div class="sidebar-section">
+  <h3>
+    Search
+    <img src="{{ '/assets/images/search-button.svg' | relative_url }}" alt="Search" class="search-header-icon" />
+  </h3>
+  <input type="text" id="search-input" placeholder="Search posts..." />
+  <ul id="results-container"></ul>
+</div>
+{% unless page.url == '/' or page.url == site.baseurl or page.url == baseurl_slash %}
+<div class="sidebar-section">
+  <h3>Follow me on:</h3>
+  {% include social-icons.html %}
+</div>
+{% endunless %}
+<!-- Sidebar content can go here if needed -->
+<script src="https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js"></script>
+<script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '{{ "/search.json" | relative_url }}',
+    searchResultTemplate: '<li><a href="{url}">{title}</a><br><small>{excerpt}</small></li>',
+    noResultsText: 'No results found',
+    limit: 10,
+  });
+</script>

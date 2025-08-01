@@ -4,6 +4,8 @@ title: "How to Install Minikube on WSL2: A Step-by-Step Guide"
 description: Step-by-step guide to running Minikube on WSL2 for local Kubernetes development.
 tagline: Run Minikube on WSL2 for local Kubernetes development.
 medium_url: https://medium.com/@LazyDom/how-to-install-minikube-on-wsl2-a-step-by-step-guide-c843822744ac
+author: LazyDom
+date: 2025-04-27
 ---
 
 Minikube is a popular tool for running Kubernetes locally, and with the power of WSL2 (Windows Subsystem for Linux 2), you can set up a lightweight Kubernetes cluster on your Windows machine. This guide will walk you through the process of installing Minikube on WSL2.
@@ -11,9 +13,6 @@ Minikube is a popular tool for running Kubernetes locally, and with the power of
 <!--more-->
 
 # How to Install Minikube on WSL2: A Step-by-Step Guide
-
-*Author: LazyDom*
-*Date: 2025-04-27*
 
 ---
 

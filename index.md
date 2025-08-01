@@ -1,7 +1,7 @@
 ---
 title: Home
 layout: default
-description: Welcome to LazyDom.xyz – DevSecOps engineer, security evangelist, and home automation geek.
+description: Welcome to LazyDom.xyz - DevSecOps engineer, security evangelist, and home automation geek.
 tagline: Welcome to my personal site and blog!
 
 ---
