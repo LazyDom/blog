@@ -288,6 +288,7 @@ AdGuard Home can act as your network's DHCP server, which is useful if your rout
 *Curious about alternatives? [See AdGuard Home vs. Pi-hole](#adguard-home-vs-pi-hole).* 
 
 **Limitations:** :no_entry_sign:
+
 Here are some examples of what cannot be blocked by a DNS-level blocker aka AdGuard Home:
 
 - YouTube, Twitch ads;
@@ -298,7 +299,8 @@ Essentially, any advertising that shares a domain with content cannot be blocked
 [Known Limitations](https://github.com/AdGuardTeam/AdGuardHome#known-limitations)
 
 **Gotchas:** :exclamation:
-- On many home routers like Netgear, TP-Link etc. operating in **"Router Mode"** you cannot set a custom DNS server under DHCP settings. In that case, you have two options to ensure all devices use AdGuard Home for DNS:
+
+On many home routers like Netgear, TP-Link etc. operating in **"Router Mode"** you cannot set a custom DNS server under DHCP settings. In that case, you have two options to ensure all devices use AdGuard Home for DNS:
    1. **Use your home router in Access Point (AP) mode instead of Router mode.** This allows you to set a custom DNS server for your network clients, as the main router (often your ISP's device) will handle DHCP and routing.
    2. **Use the DHCP feature of AdGuard Home.** Disable DHCP on your router and enable it in AdGuard Home to control DNS assignment. See the section above for details on enabling [AdGuard Home's DHCP server](#optional-enable-and-configure-dhcp-server).
 
