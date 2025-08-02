@@ -212,6 +212,10 @@ I like to call it your personal **AdGuardian** :shield:—a digital shield for y
    - **Go to Settings → General settings.** Below are optional and are great additions to harden your DNS security:
       - **Enable Web Security** to check if a domain is blocked by browsing security web service. It will use a privacy-friendly lookup API to perform the check: only a short prefix of the domain name SHA256 hash is sent to the server.
       - **Enable Parental Control** to block adult websites and enforce safe browsing for kids.
+
+      > :bulb: **Side Note:** An excellent example of this is when AdGuard Home :shield: is installed as a [Home Assistant Community Add-on](https://github.com/hassio-addons/addon-adguard-home) :house_with_garden:. In this setup, you can write automations in Home Assistant :robot: to turn on parental controls :no_entry_sign: when the kids get home :family: or based on any smart home trigger :bulb:.  
+      > **But let's not go down that Rabbit Hole :rabbit2: here!** For the sake of this post, we'll stick with AdGuard Home running directly on your Raspberry Pi. If you're curious about Home Assistant automations, that's a whole new adventure for another day!
+
       - **Enable Safe Search** to enforce safe search in the following search engines:
          - :white_check_mark: Bing
          - :white_check_mark: Duckduckgo
