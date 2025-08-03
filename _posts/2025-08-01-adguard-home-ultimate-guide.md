@@ -116,7 +116,7 @@ I like to call it your personal **AdGuardian** :shield:—a digital shield for y
 
 *Need to set up DHCP? [Jump to DHCP Server instructions](#optional-enable-and-configure-dhcp-server).* 
 
-1. Set a static IP address for your Pi **(Highly Recommended** :pushpin: **- since AdGuard Home is a server so it needs a static IP address to function properly. Otherwise, at some point your router may assign a different IP address to this device. Also, this step is mandatory if you plan to use [AdGuard Home as a DHCP server](#optional-enable-and-configure-dhcp-server))):**
+1. Set a static IP address for your Pi **(Highly Recommended** :pushpin: **- since AdGuard Home is a server so it needs a static IP address to function properly. Otherwise, at some point your router may assign a different IP address to this device. Also, this step is mandatory if you plan to use [AdGuard Home as a DHCP server](#optional-enable-and-configure-dhcp-server)):**
 
    - **List available connections** (run the below command to get a list of connection names available to use):
      ```sh
