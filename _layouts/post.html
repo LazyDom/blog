@@ -28,7 +28,11 @@
         <section id="main-content">
           {% assign words = content | number_of_words %}
           {% assign read_time = words | divided_by:200 | ceil %}
-          <p>:stopwatch: {{ read_time }} min read</p>
+          {% assign today = 'now' | date: '%s' %}
+          {% assign post_date = page.date | date: '%s' %}
+          {% assign seconds_diff = today | minus: post_date %}
+          {% assign days_ago = seconds_diff | divided_by: 86400 | floor %}
+          <p>:stopwatch: {{ read_time }} min read <span class="meta-sep">|</span> :calendar: {{ days_ago }} day{% if days_ago != 1 %}s{% endif %} ago</p>
           {{ content }}
           {% include share-links.html %}
           {% if page.medium_url %}
