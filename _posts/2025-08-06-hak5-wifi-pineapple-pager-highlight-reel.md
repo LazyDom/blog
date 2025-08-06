@@ -5,7 +5,6 @@ date: 2025-08-05
 categories: [hak5, wifi, pager, hardware]
 description: A creative highlight reel and FAQ for the Hak5 WiFi Pineapple Pager, blending retro vibes, extensibility, and modern wireless pentesting features.
 tagline: Wireless hacking nostalgia meets modern extensibility.
-medium_url: 
 cdn_base: "https://hak5.org/cdn/shop/"
 author: LazyDom
 date: 2025-08-06
