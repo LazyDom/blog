@@ -26,7 +26,7 @@ Untethered from a computer, the WiFi Pineapple Pager is a standalone pentest exp
 *WiFi Pineapple Pager product shot (static)* :pager: :pineapple:
 
 - **Extensibility Unleashed:** Thanks to Hak5’s open mod/add-on ecosystem, the Pager is more than a tool—it’s a platform. Community mods are already in the works like GPS modules, Ethernet adapters, or additional radios, including early support for **Meshtastic** mesh networking.
-- **On the Bleeding Edge:** While WiFi 7 support isn’t here yet (Hey! I can't complain since the standard was only ratified 3 days ago! as of this writing. Also, its tricky with new WiFi standards as it takes a while for a good chipset to have drivers capable of doing the monior/inject necessary for WiFi Pineapple), Hak5’s rapid innovation means future-proofing is always top of mind. I hear screams for another add-on to support WiFi 7 :joy: :rocket: :signal_strength:
+- **On the Bleeding Edge:** While WiFi 7 support isn’t here yet (Hey! I can't complain since the standard was only ratified 3 days ago! as of this writing. Also, its tricky with new WiFi standards as it takes a while for a good chipset to have drivers capable of doing the monitor/inject necessary for WiFi Pineapple), Hak5’s rapid innovation means future-proofing is always top of mind. I hear screams for another add-on to support WiFi 7 :joy: :rocket: :signal_strength:
 - **Why It’s a Game Changer:** Whether you’re a pentester, wireless enthusiast, or just love cool gadgets, the Pineapple Pager is designed to be hacked, modded, and shared.
 
 <video controls width="100%" poster="{{ page.cdn_base }}files/wifi-pineapple-pager-black-white_bg_1600x.png" autoplay muted>
