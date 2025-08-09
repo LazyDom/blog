@@ -44,7 +44,7 @@ jobs:
           args: >-
             --verbose
             --no-progress
-            --exclude github.com --exclude x.com --exclude raspberrypi.com --exclude 'https://lazydom.xyz/blog/email-security-phishing-analysis/' --max-concurrency 2
+            --exclude github.com --exclude x.com --exclude raspberrypi.com --exclude abuseipdb.com --exclude 'https://lazydom.xyz/blog/email-security-phishing-analysis/' --max-concurrency 2
             './_site/**/*.html'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
