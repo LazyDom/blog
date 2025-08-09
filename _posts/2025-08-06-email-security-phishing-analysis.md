@@ -84,6 +84,15 @@ Compare “From” and “Reply-To”—if they differ, be suspicious. But alway
     - Start from the bottom of the header (closest to To/From)
     - Examine each "Received" line for mail server, IP, and domain
 
+**Is delegated access configured on the mailbox?**  
+Check for mailbox delegates
+
+**Is there a forwarding rule configured for the mailbox?**  
+Review mailboxes for SMTP forwarding and Inbox rules that send mail externally. Investigate rules with external addresses or suspicious keywords.
+
+**Review mail transport rules**  
+Audit Exchange mail flow (transport) rules for new or modified rules that redirect mail to external domains.
+
 ---
 
 ## Static Analysis
@@ -97,7 +106,8 @@ HTML emails can hide malicious links behind buttons or text. Always hover to che
 > Check the scan date—old results may not reflect current threats.
 
 **Caution:** Uploading files to VirusTotal can leak sensitive data—prefer hash lookups when possible.
-- Use [Cisco Talos Intelligence](https://talosintelligence.com/) and [AbuseIPDB](https://abuseipdb.com/) to check SMTP IP reputation.
+- Use [Trend Micro Site Safety Check](https://global.sitesafety.trendmicro.com/) for URL reputation
+- Use [Talos Intelligency](https://talosintelligence.com/) and [AbuseIPDB](https://abuseipdb.com/) to check SMTP IP and URL reputation.
 
 ---
 
@@ -133,8 +143,37 @@ SOC analyst's workflow for investigating suspicious emails:
 1. **Monitoring & Detection**: Analysts use email gateways, EDR/XDR, SIEM, and user reports to monitor alerts.
 2. **Triage**: Examine headers, links, attachments, sender behavior. Decide if the email is malicious, suspicious, or benign.
 3. **User Engagement**: Contact users for context—did they click, reply, or enter credentials?
-4. **Investigation**: Pivot to host/network logs, check for payload execution, lateral movement, and spread.
-5. **Remediation & Containment**: Quarantine emails, block domains/URLs, reset credentials, revoke sessions.
+4. **Investigation**: Pivot to host/network logs on EDR/XDR & SIEM, check for payload execution, lateral movement, and spread.
+    
+    **Phishing Investigation Checklist**
+
+    Use this checklist to guide your investigation of a suspected phishing email:
+
+        [ ] Review initial phishing email
+        [ ] Get the list of users who received this email
+        [ ] Get the latest dates when each user had access to their mailbox
+        [ ] Is delegated access configured on the mailbox?
+        [ ] Is there a forwarding rule configured for the mailbox?
+        [ ] Review mail transport rules
+        [ ] Find the email(s)
+        [ ] Did the user read/open the email?
+        [ ] Who else got the same email?
+        [ ] Did the email contain an attachment?
+        [ ] Was there a payload in the attachment?
+        [ ] Check email header for true source of the sender
+        [ ] Verify IP addresses for links to attackers/campaigns
+        [ ] Did the user click the link in the email?
+        [ ] On what endpoint was the email opened?
+        [ ] Was the attachment payload executed?
+        [ ] Was the destination IP/URL touched or opened?
+        [ ] Was malicious code executed?
+        [ ] What sign-ins happened with the account? (SSO logins, MFAs)
+        [ ] Investigate source IP address
+
+5. **Remediation & Containment**: Isolate infected endpoints, quarantine or delete emails, block hashes/IPs/domains/URLs, lock compromised user accounts, reset credentials, revoke sessions.
+    > Initiate a Host scan, use anti-malware software, or Next-Generation Antivirus (NGAV) if available, to scan affected systems and ensure all malicious content is removed after reimaging.
+
+    > Take a forensic image of the affected system(s) using tools such as **Forensic Tool Kit (FTK)** or **EnCase** before wiping and reimaging. This preserves evidence for legal proceedings and enables deeper investigation and lessons learned.
 6. **Detection Tuning & Feedback**: Adjust rules, reduce false positives, improve coverage.
 7. **Documentation & Reporting**: Record findings, actions, and lessons learned in ticketing/case management systems.
 
@@ -144,7 +183,7 @@ SOC analyst's workflow for investigating suspicious emails:
 - Always check for user interaction and widespread delivery
 - Don't assume trust based on SPF/DKIM/DMARC pass—compromised accounts can still send attacks
 - Remediate quickly: quarantine, block, reset credentials, revoke sessions
-- Document everything: IOCS (IPs, domains, hashes), affected users, actions, verdict, lessons learned
+- Document everything: IOCS (hashes, IPs, domains, URLs, files), affected users, actions, verdict, lessons learned
 
 ### Final Thoughts
 Take your time with investigations, check all the bases, and learn the manual steps before relying on automated tools. Security tools make things easier, but manual review builds intuition and expertise.
