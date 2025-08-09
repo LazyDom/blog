@@ -58,7 +58,7 @@ Programmable 4-way D-pad with vibrant RGB LEDs. Hack the interface, light up you
 Ringtone speaker and vibration motor for that authentic pager buzz—paging you back to the '90s, but with modern flair.
 
 **4. Tri-Band WiFi**  
-Full spectrum coverage across 2.4, 5, and 6 GHz bands with 802.11 a/b/g/n/ac/ax. Ready for everything but WiFi 7 (ratified just days ago!).
+Full spectrum coverage across 2.4, 5, and 6 GHz bands with 802.11 a/b/g/n/ac/ax. Ready for everything but WiFi 7 (ratified just 3 days ago as of this writing!).
 
 **5. USB Expansion**  
 Custom mods and add-ons expand functionality via standard USB and Linux utilities. Meshtastic support is already brewing!
