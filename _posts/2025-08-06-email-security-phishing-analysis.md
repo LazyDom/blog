@@ -141,9 +141,8 @@ Thank you for your interest in the Sr. AI Engineer opening... (truncated)
 ```
 </details>
 
-Use [MXToolbox](https://mxtoolbox.com/) to check the domain’s MX servers. If the sender’s SMTP IP doesn’t match, it’s likely spoofed.
-
-Compare “From” and “Reply-To”—if they differ, be suspicious. But always consider the full context (attachments, URLs, content).
+- Use [MXToolbox](https://mxtoolbox.com/) to check the domain’s MX servers. If the sender’s SMTP IP doesn’t match, it’s likely spoofed.
+- Compare “From” and “Reply-To”—if they differ, be suspicious. But always consider the full context (attachments, URLs, content).
 - New domains in emails are often used for phishing.
 - Trace email hops and analyze headers:
     - Start from the bottom of the header (closest to To/From)
