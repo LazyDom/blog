@@ -9,7 +9,7 @@ author: LazyDom
 date: 2025-08-08
 ---
 
-## Why Email Security Matters
+## Why Email Security Matters :lock:
 
 Most organizations rely on email as their primary means of communication, making it a major attack channel with significant financial risk.
 
@@ -25,7 +25,7 @@ Phishing emails use manipulative, high‑impact language: “you have won a gift
 Email is often the first point in the kill chain—defending it early reduces downstream compromise.
 <!--more-->
 
-### Information Gathering & Spoofing
+### Information Gathering & Spoofing :performing_arts:
 
 Because emails don’t always have authentication, attackers can send messages pretending to be someone else. Spoofing tricks users into trusting fake emails. Protocols like SPF, DKIM, and DMARC help verify senders, but aren’t always enforced.
 
@@ -39,7 +39,7 @@ To check if an email is spoofed, use tools like [MXToolbox](https://mxtoolbox.co
 
 ---
 
-### Email Traffic Analysis
+### Email Traffic Analysis :satellite:
 
 Analyzing phishing attacks involves checking sender addresses, SMTP IPs, domains, subjects, recipients, and timestamps. If malicious emails target the same users repeatedly, their addresses may be leaked online (e.g., PasteBin).
 
@@ -49,7 +49,7 @@ If emails arrive outside of expected business hours, the attacker may be operati
 
 ---
 
-## What is an Email Header & How to Read It?
+## What is an Email Header & How to Read It? :mailbox:
 
 The header contains sender, recipient, date, and routing info. Key fields include:
 
@@ -71,7 +71,7 @@ To access headers:
 
 ---
 
-## Email Header Analysis
+## Email Header Analysis :male_detective:
 
 When you suspect phishing, ask:
 - Was the email sent from the correct SMTP server?
@@ -174,7 +174,7 @@ Audit Exchange mail flow (transport) rules for new or modified rules that redire
 
 ---
 
-## Static Analysis
+## Static Analysis :alembic:
 
 HTML emails can hide malicious links behind buttons or text. Always hover to check the real URL.
 
@@ -190,7 +190,7 @@ HTML emails can hide malicious links behind buttons or text. Always hover to che
 
 ---
 
-## Dynamic Analysis
+## Dynamic Analysis :gear:
 
 Never run suspicious files on your own computer. Use sandbox environments like:
 
@@ -207,7 +207,7 @@ Online browsers like [Browserling](https://www.browserling.com/) let you safely 
 
 ---
 
-## Delivery & Evasion Techniques Attackers Use
+## Delivery & Evasion Techniques Attackers Use :construction:
 Attackers may use legitimate services to bypass filters:
 - **Cloud storage links** (Google Drive, Microsoft OneDrive)
 - **Free subdomains** (WordPress, Blogspot, Wix)
@@ -215,7 +215,7 @@ Attackers may use legitimate services to bypass filters:
 
 These can trick users and analysts by appearing harmless.
 
-### SOC Analyst Workflow: How Investigations Happen
+### SOC Analyst Workflow: How Investigations Happen :hammer_and_wrench:
 SOC analyst's workflow for investigating suspicious emails:
 
 1. **Monitoring & Detection**: Analysts use email gateways, EDR/XDR, SIEM, and user reports to monitor alerts.
@@ -256,7 +256,7 @@ SOC analyst's workflow for investigating suspicious emails:
 6. **Detection Tuning & Feedback**: Adjust rules, reduce false positives, improve coverage.
 7. **Documentation & Reporting**: Record findings, actions, and lessons learned in ticketing/case management systems.
 
-### SOC Analyst Tips & Best Practices
+### SOC Analyst Tips & Best Practices :bulb:
 - Use a proven triage framework: header/source analysis → content review → user interaction → remediation → documentation
 - Avoid interacting with malicious content on your host—use sandboxes and passive tools
 - Always check for user interaction and widespread delivery
@@ -264,10 +264,10 @@ SOC analyst's workflow for investigating suspicious emails:
 - Remediate quickly: quarantine, block, reset credentials, revoke sessions
 - Document everything: IOCs (hashes, IPs, domains, URLs, files), affected users, actions, verdict, lessons learned
 
-### Final Thoughts
+### Final Thoughts :white_check_mark:
 Take your time with investigations, check all the bases, and learn the manual steps before relying on automated tools. Security tools make things easier, but manual review builds intuition and expertise.
 
-## Get Involved!
+## Get Involved! :mega:
 
 Have you analyzed a phishing email, spotted a clever spoof, or have tips for email security? Share your experiences, favorite tools, or questions in the comments below—or tag me on social media.
 
