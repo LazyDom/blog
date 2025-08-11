@@ -23,8 +23,8 @@ Common Email Threats:
 - **Malicious Attachments/Malware**: Files that deliver malware
 - **Quishing & Emerging Attacks**: QR code phishing, AI-generated emails, calendar invites
 
-Phishing emails use tricky phrases like “you have won a gift,” “don’t miss out on the big discount,” or “your account will be suspended if you don’t click.” The goal isn’t just to steal passwords, but to exploit the human factor—the weakest link in security. Attackers use phishing as a first step to infiltrate systems. :envelope: :warning: :mag:
-Email is often the first point in the kill chain—defending it is critical.
+Phishing emails use manipulative, high‑impact language: “you have won a gift,” “don’t miss out on the big discount,” “your account will be suspended,” “immediate action required,” “unusual sign‑in detected,” or “final notice – payment failure.” Beyond stealing credentials, the real objective is exploiting urgency, fear, curiosity, financial pressure, or authority—the human factor (still the weakest link). Attackers weaponize time pressure (deadlines, expiring access), consequences (account closure, legal escalation), and rewards (refunds, bonuses) to short‑circuit judgment. :envelope: :warning: :mag:
+Email is often the first point in the kill chain—defending it early reduces downstream compromise.
 <!--more-->
 
 ### Information Gathering & Spoofing
@@ -67,6 +67,7 @@ The header contains sender, recipient, date, and routing info. Key fields includ
 To access headers:
 - **Gmail:** Open email → 3 dots → Download message (.eml)
 - **Outlook:** Open email → File → Info → Properties → Internet headers
+- **Reference:** Multi-client guide: [How to get full email headers](https://mxtoolbox.com/EmailHeaders.aspx)
 
 ---
 
@@ -128,8 +129,7 @@ Online browsers like [Browserling](https://www.browserling.com/) (safe online br
 
 ---
 
-## Additional Techniques
-
+## Delivery & Evasion Techniques Attackers Use
 Attackers may use legitimate services to bypass filters:
 - **Cloud storage links** (Google Drive, Microsoft OneDrive)
 - **Free subdomains** (WordPress, Blogspot, Wix)
@@ -169,6 +169,7 @@ SOC analyst's workflow for investigating suspicious emails:
         [ ] Was malicious code executed?
         [ ] What sign-ins happened with the account? (SSO logins, MFAs)
         [ ] Investigate source IP address
+        [ ] Investigate device(s) that interacted
 
 5. **Remediation & Containment**: Isolate infected endpoints, quarantine or delete emails, block hashes/IPs/domains/URLs, lock compromised user accounts, reset credentials, revoke sessions.
     > Initiate a Host scan, use anti-malware software, or Next-Generation Antivirus (NGAV) if available, to scan affected systems and ensure all malicious content is removed after reimaging.
