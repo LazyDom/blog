@@ -110,7 +110,7 @@ Tracking-Link: https://tracking.terrigenisis.com/...
 > **Tip:** Even if the sender isn’t spoofed (SPF/DKIM/DMARC pass), compromised accounts can send malicious emails. Always validate intent and context.
 
 <details>
-  <summary>Expand Raw Header & Body Snippet (Truncated)</summary>
+  <summary>Click to expand: Raw Header & Body Snippet (Truncated)</summary>
 
 ```text
 Delivered-To: victim@example.com
