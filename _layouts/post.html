@@ -39,11 +39,12 @@
             {% include medium-link.html url=page.medium_url %}
           {% endif %}
 
-          {% if page.related_posts and page.related_posts.size > 0 %}
+          {% assign rel = site.related_posts | where_exp: 'p', 'p.url != page.url' %}
+          {% if rel and rel.size > 0 %}
             <section class="related-posts">
               <h3>Related Posts</h3>
               <ul>
-                {% for post in page.related_posts %}
+                {% for post in rel %}
                   <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
                 {% endfor %}
               </ul>
