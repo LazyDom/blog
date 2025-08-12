@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "AdGuard Home Setup on Raspberry Pi: Block Ads & Trackers Network-Wide"
+categories: [networking, privacy, dns, raspberry-pi, security]
 description: A practical guide to setting up AdGuard Home on a Raspberry Pi for network-wide ads and trackers blocking, with limitations, gotchas, and a comparison to Pi-hole.
 tagline: Block ads and trackers across your entire network with AdGuard Home on a Raspberry Pi.
 medium_url: https://medium.com/@LazyDom/adguard-home-setup-on-raspberry-pi-block-ads-trackers-network-wide-0b48b60786a2

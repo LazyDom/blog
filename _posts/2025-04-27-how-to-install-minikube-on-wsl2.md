@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "How to Install Minikube on WSL2: A Step-by-Step Guide"
+categories: [kubernetes, devops, wsl2, minikube]
 description: Step-by-step guide to running Minikube on WSL2 for local Kubernetes development.
 tagline: Run Minikube on WSL2 for local Kubernetes development.
 medium_url: https://medium.com/@LazyDom/how-to-install-minikube-on-wsl2-a-step-by-step-guide-c843822744ac

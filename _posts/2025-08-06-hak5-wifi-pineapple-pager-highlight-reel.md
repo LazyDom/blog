@@ -2,7 +2,7 @@
 layout: post
 title: "Hak5 WiFi Pineapple Pager: A Modern Classic for Wireless Hackers"
 date: 2025-08-05
-categories: [hak5, wifi, pager, hardware]
+categories: [hak5, wifi, pager, hardware, security]
 description: A creative highlight reel and FAQ for the Hak5 WiFi Pineapple Pager, blending retro vibes, extensibility, and modern wireless pentesting features.
 tagline: Wireless hacking nostalgia meets modern extensibility.
 medium_url: https://medium.com/@LazyDom/hak5-wifi-pineapple-pager-a-modern-classic-00d5252819f5

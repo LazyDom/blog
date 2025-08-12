@@ -39,12 +39,24 @@
             {% include medium-link.html url=page.medium_url %}
           {% endif %}
 
-          {% assign rel = site.related_posts | where_exp: 'p', 'p.url != page.url' %}
-          {% if rel and rel.size > 0 %}
+          {%- comment -%} Related posts: match by shared categories; fallback to recent if none {%- endcomment -%}
+          {% assign candidates = site.posts | where_exp: 'p', 'p.url != page.url' %}
+          {% assign rel = '' | split: '' %}
+          {% for cat in page.categories %}
+            {% assign matches = candidates | where_exp: 'p', 'p.categories contains cat' %}
+            {% assign rel = rel | concat: matches %}
+          {% endfor %}
+          {% assign rel = rel | uniq %}
+          {% assign list = rel %}
+          {% if list == empty %}
+            {% assign list = candidates %}
+          {% endif %}
+
+          {% if list and list.size > 0 %}
             <section class="related-posts">
               <h3>Related Posts</h3>
               <ul>
-                {% for post in rel %}
+                {% for post in list limit:3 %}
                   <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
                 {% endfor %}
               </ul>
