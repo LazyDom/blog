@@ -5,6 +5,7 @@ categories: [security, email, phishing, analysis]
 description: A practical guide to understanding, detecting, and analyzing phishing emails using real-world techniques and tools.
 tagline: Strengthen your defenses—spot phishing before it strikes!
 medium_url: 
+gist_url: https://gist.github.com/LazyDom/5e492eab74853d8ed840f3692001bbb4
 author: LazyDom
 date: 2025-08-08
 ---
@@ -81,18 +82,22 @@ When you suspect phishing, ask:
 > Sample below shows how much signal you can extract quickly without reading the entire raw message.
 
 #### Minimal Forensic Header Slice (Example)
+> **Disclaimer:** The following header and body samples have been defanged and redacted for privacy and safety. Do not use real, unredacted samples in public posts. Always sanitize sensitive data before sharing.
+
+Download: [Defanged & Redacted .eml sample (Gist)]({{ page.gist_url }})
+
 ```
-Return-Path: <bounce@bounces.terrigenisis.com>
-From: "Mantra Falcon" <maha+email@talent.terrigenisis.com>
-To: victim@example.com
+Return-Path: <bounce[@]bounces[.]terrigenisis[.]com>
+From: "Mantra Falcon" <maha+email[@]talent[.]terrigenisis[.]com>
+To: victim[@]example[.]com
 Subject: Sr. AI Engineer opening
 Date: Wed, 6 Aug 2025 17:53:06 -0400
-Message-ID: <955445473.62711.7145517168948@ip-10-47-164-231.ec2.internal>
-Received: from [10.90.23.234] (internal) by sparkpost REST
-Received: from terrigenisis-talentplatform (182.247.176.30) by mx.google.com (TLS1.2)
+Message-ID: <955445473.62711.7145517168948[@]ip-10[.]47[.]164[.]231[.]ec2[.]internal>
+Received: from [10[.]90[.]23[.]234] (internal) by sparkpost REST
+Received: from terrigenisis-talentplatform (hxxp://182[.]247[.]176[.]30) by mx[.]google[.]com (TLS1.2)
 Authentication-Results: dkim=pass spf=pass dmarc=pass
-List-Unsubscribe: <mailto:unsubscribe@...>, <https://unsubscribe.spmta.com/...>
-Tracking-Link: https://tracking.terrigenisis.com/...
+List-Unsubscribe: <mailto:unsubscribe[@]...>, <hxxps://unsubscribe[.]spmta[.]com/...>
+Tracking-Link: hxxps://tracking[.]terrigenisis[.]com/...
 ```
 
 #### What This Tells Us (Fast Triage)
@@ -113,26 +118,26 @@ Tracking-Link: https://tracking.terrigenisis.com/...
   <summary>Click to expand: Raw Header & Body Snippet (Truncated)</summary>
 
 ```text
-Delivered-To: victim@example.com
+Delivered-To: victim[@]example[.]com
 Received: by 2002:a05:6918:9e90:... Wed, 6 Aug 2025 14:53:08 -0700 (PDT)
 X-Received: by 2002:a05:6902:13c7:...
 ARC-Seal: i=1; a=rsa-sha256; ...
 ARC-Message-Signature: i=1; ...
-ARC-Authentication-Results: i=1; mx.google.com; dkim=pass; spf=pass; dmarc=pass
-Return-Path: <msprvs1=203139...@bounces.terrigenisis.com>
-Received: from terrigenisis-talentplatform-166130.email.terrigenisis.tools (182.247.176.30) ...
-Received-SPF: pass ... client-ip=182.247.176.30;
-Authentication-Results: mx.google.com; dkim=pass; spf=pass; dmarc=pass
-DKIM-Signature: v=1; a=rsa-sha256; d=talent.terrigenisis.com; ...
-Received: from [10.90.23.234] ... sparkpost ...
+ARC-Authentication-Results: i=1; mx[.]google[.]com; dkim=pass; spf=pass; dmarc=pass
+Return-Path: <msprvs1=203139...[@]bounces[.]terrigenisis[.]com>
+Received: from terrigenisis-talentplatform-166130[.]email[.]terrigenisis[.]tools (hxxp://182[.]247[.]176[.]30) ...
+Received-SPF: pass ... client-ip=hxxp://182[.]247[.]176[.]30;
+Authentication-Results: mx[.]google[.]com; dkim=pass; spf=pass; dmarc=pass
+DKIM-Signature: v=1; a=rsa-sha256; d=talent[.]terrigenisis[.]com; ...
+Received: from [10[.]90[.]23[.]234] ... sparkpost ...
 Date: Wed, 6 Aug 2025 17:53:06 -0400 (EDT)
-From: Mantra Falcon <maha+email+tag@talent.terrigenisis.com>
-Reply-To: Mantra Falcon <maha+email+tag@talent.terrigenisis.com>
+From: Mantra Falcon <maha+email+tag[@]talent[.]terrigenisis[.]com>
+Reply-To: Mantra Falcon <maha+email+tag[@]talent[.]terrigenisis[.]com>
 Subject: Sr. AI Engineer opening
 MIME-Version: 1.0
 Content-Type: multipart/alternative; boundary="----=_Part_62709_154369604.1754517186981"
 Precedence: bulk
-List-Unsubscribe: <mailto:unsubscribe@unsub.spmta.com?...>, <https://unsubscribe.spmta.com/u/...>
+List-Unsubscribe: <mailto:unsubscribe[@]unsub[.]spmta[.]com?...>, <hxxps://unsubscribe[.]spmta[.]com/u/...>
 
 -- Body (text/plain excerpt) --
 Thank you for your interest in the Sr. AI Engineer opening... (truncated)
