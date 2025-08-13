@@ -104,8 +104,8 @@ Tracking-Link: hxxps://tracking[.]terrigenisis[.]com/...
 
 | **Indicator** | **Analytical Meaning** |
 |-----------|--------------------|
-| Origin IP `182.247.176.30` | Public sending source; run reputation & geo lookups; pivot to threat intel / campaign overlaps. |
-| Private hop `[10.90.23.234]` | Internal ESP (email service provider) injection point; normal for bulk delivery; neutral alone. |
+| Origin IP `182[.]247[.]176[.]30` | Public sending source; run reputation & geo lookups; pivot to threat intel / campaign overlaps. |
+| Private hop `10[.]90[.]23[.]234` | Internal ESP (email service provider) injection point; normal for bulk delivery; neutral alone. |
 | SPF / DKIM / DMARC = pass | Authentication alignment present; does NOT prove benign intent (compromised or abused account still possible). |
 | Bulk markers (`Precedence: bulk`, `List-Unsubscribe`, tracking link/pixel) | Commercial / marketing style; may still deliver phishing lure or lead-gen style credential harvest. |
 | Subject + tracking domain mismatch | Brand or infrastructure inconsistency; validate if domain legitimately represents the sender. |
