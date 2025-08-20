@@ -14,3 +14,7 @@ github:
 blog_name: LazyDom's Blog
 plugins:
   - jemoji
+# Centralized external links
+mitre:
+  techniques_base: https://attack.mitre.org/techniques
+  enterprise_techniques: https://attack.mitre.org/techniques/enterprise/

@@ -267,6 +267,32 @@ SOC analyst's workflow for investigating suspicious emails:
 - Don’t assume trust based on SPF/DKIM/DMARC pass—compromised accounts can still send attacks
 - Remediate quickly: quarantine, block, reset credentials, revoke sessions
 - Document everything: IOCs (hashes, IPs, domains, URLs, files), affected users, actions, verdict, lessons learned
+- Map to [MITRE ATT&CK TTPs]({{ site.mitre.enterprise_techniques }}) to gauge intent and severity quickly:
+  - [T1566.001]({{ site.mitre.techniques_base }}/T1566/001/) Spearphishing Attachment — malicious attachments delivering payloads
+  - [T1566.002]({{ site.mitre.techniques_base }}/T1566/002/) Spearphishing Link — credential‑harvest or drive‑by links
+  - [T1204.001]({{ site.mitre.techniques_base }}/T1204/001/) Malicious Link — user execution via link click
+  - [T1204.002]({{ site.mitre.techniques_base }}/T1204/002/) Malicious File — user execution of a downloaded/opened file
+  - [T1114]({{ site.mitre.techniques_base }}/T1114/) Email Collection — mailbox access/collection after successful phish
+  - [T1114.003]({{ site.mitre.techniques_base }}/T1114/003/) Email Forwarding Rule — stealthy auto‑forward exfil from victim mailbox
+  - [T1041]({{ site.mitre.techniques_base }}/T1041/) Exfiltration Over C2 Channel — data leaves over established C2
+  - [T1567.002]({{ site.mitre.techniques_base }}/T1567/002/) Exfiltration to Cloud Storage — uploads to public cloud/file‑sharing services
+  - [T1071.001]({{ site.mitre.techniques_base }}/T1071/001/) Application Layer Protocol: Web — HTTPS‑based delivery/C2
+
+  Quick MITRE mapping (artifacts → techniques):
+
+  | Artifact | Typical intent | ATT&CK techniques |
+  |---|---|---|
+  | URL link (defanged) | Credential harvest, drive‑by | [T1566.002]({{ site.mitre.techniques_base }}/T1566/002/), [T1204.001]({{ site.mitre.techniques_base }}/T1204/001/), [T1071.001]({{ site.mitre.techniques_base }}/T1071/001/) |
+  | Attachment (Office/PDF/ZIP) | Initial access, execution | [T1566.001]({{ site.mitre.techniques_base }}/T1566/001/), [T1204.002]({{ site.mitre.techniques_base }}/T1204/002/) |
+  | Auto‑forwarding rule | Covert collection/exfiltration | [T1114.003]({{ site.mitre.techniques_base }}/T1114/003/) |
+  | Cloud storage link/upload | Exfiltration to cloud | [T1567.002]({{ site.mitre.techniques_base }}/T1567/002/) |
+  | HTTPS callbacks/beaconing | Web C2 and/or exfiltration | [T1071.001]({{ site.mitre.techniques_base }}/T1071/001/), [T1041]({{ site.mitre.techniques_base }}/T1041/) |
+
+- Root‑cause pivots to verify quickly (post‑triage):
+  - Mailbox rules/forwarding set by attacker (ties to T1114.003)
+  - OAuth/app consent/grants added around the incident window
+  - Unusual sign‑ins (impossible travel, new ASNs), MFA prompts/fatigue
+  - New inbox rules/transport rules in tenant; newly created inbox delegates
 
 ### Final Thoughts :white_check_mark:
 Take your time with investigations, check all the bases, and learn the manual steps before relying on automated tools. Security tools make things easier, but manual review builds intuition and expertise.
