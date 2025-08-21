@@ -2,8 +2,9 @@
 
 [![Links](https://github.com/LazyDom/blog/actions/workflows/link-check.yml/badge.svg?branch=main)](https://github.com/LazyDom/blog/actions/workflows/link-check.yml)
 
-Welcome to my personal blog about Security, Home Automation, IOT, DevOps, Kubernetes and more!  
-I’m a DevSecOps Engineer, Security Evangelist, and Home Automation Geek. I love tinkering with new tech and sharing what I learn.
+Welcome to my personal blog about Data Engineering, Security, Home Automation, IOT, DevOps, Kubernetes and more!
+
+Yet Another Data Engineer, Security Evangelist, and Home Automation Geek. I love tinkering with new tech and sharing what I learn.
 
 ## Posts
 

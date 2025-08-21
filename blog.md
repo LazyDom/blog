@@ -2,12 +2,12 @@
 title: Blog
 layout: default
 permalink: /blog/
-description: All posts and guides by LazyDom on security, automation, DevOps, and tech.
-tagline: All my posts and guides on security, automation, and tech.
+description: All posts and guides by LazyDom on data engineering, security, automation, DevOps, and tech.
+tagline: All my posts and guides on data engineering, security, automation, and tech.
 ---
 # LazyDom's Blog
 
-Welcome to my personal blog about Security, Home Automation, IOT, DevOps, Kubernetes and more!! Here you’ll find my technical articles, guides, and notes.
+Welcome to my personal blog about Data Engineering, Security, Home Automation, IOT, DevOps, Kubernetes and more!! Here you’ll find my technical articles, guides, and notes.
 
 ## Posts
 

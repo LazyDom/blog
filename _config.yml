@@ -4,7 +4,7 @@ excerpt_separator: "<!--more-->"
 permalink: /blog/:title/
 title: LazyDom
 description: >-
-  Personal site of LazyDom - DevSecOps engineer, security evangelist, blogger, and automation enthusiast.
+  Personal site of LazyDom - Yet Another Data Engineer, security evangelist, blogger, and automation enthusiast.
   Explore my bio, portfolio, blog, and more.
 github:
   repository_url: https://github.com/LazyDom/blog
