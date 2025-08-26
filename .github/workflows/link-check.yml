@@ -29,7 +29,7 @@ jobs:
       - name: Build with Jekyll (GitHub Pages)
         uses: actions/jekyll-build-pages@v1.0.13
       - name: Check GitHub links with lychee-action
-        uses: lycheeverse/lychee-action@v2.6.0
+        uses: lycheeverse/lychee-action@v2.6.1
         with:
           args: >-
             --verbose
@@ -39,7 +39,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Check non-GitHub links with lychee-action
-        uses: lycheeverse/lychee-action@v2.6.0
+        uses: lycheeverse/lychee-action@v2.6.1
         with:
           args: >-
             --verbose
