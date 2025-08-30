@@ -11,9 +11,7 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
     <link rel="canonical" href="{{ page.url | absolute_url }}">
-    {% unless jekyll.environment == 'development' %}
-      {% include analytics.html %}
-    {% endunless %}
+  {% include analytics.html %}
   </head>
   <body>
     {% assign baseurl_slash = site.baseurl | append: '/' %}
