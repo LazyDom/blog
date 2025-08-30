@@ -14,6 +14,12 @@ github:
 blog_name: LazyDom's Blog
 plugins:
   - jemoji
+# Analytics configuration
+analytics:
+  enabled: true              # disable here if you ever want to turn tracking off
+  provider: goatcounter      # selected provider
+  goatcounter:
+  code: lazydom-analytics  # subdomain: https://lazydom-analytics.goatcounter.com
 # Centralized external links
 mitre:
   techniques_base: https://attack.mitre.org/techniques

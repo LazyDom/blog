@@ -1,0 +1,7 @@
+{%- comment -%}
+GoatCounter analytics (only provider enabled). Loads script unless disabled or in development.
+Disable by setting analytics.enabled: false in _config.yml.
+{%- endcomment -%}
+{% if site.analytics.enabled and site.analytics.goatcounter.code %}
+<script data-goatcounter="https://{{ site.analytics.goatcounter.code }}.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+{% endif %}
