@@ -17,7 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v5
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.x'
       - name: Install yamllint
@@ -42,7 +42,7 @@ jobs:
           JEKYLL_ENV: production
           PAGES_REPO_NWO: ${{ github.repository }}
       - name: Check GitHub links with lychee-action
-        uses: lycheeverse/lychee-action@v2.6.0
+        uses: lycheeverse/lychee-action@v2.6.1
         with:
           args: >-
             --verbose
@@ -52,7 +52,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Check non-GitHub links with lychee-action
-        uses: lycheeverse/lychee-action@v2.6.0
+        uses: lycheeverse/lychee-action@v2.6.1
         with:
           args: >-
             --verbose
