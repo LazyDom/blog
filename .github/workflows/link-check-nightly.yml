@@ -1,0 +1,36 @@
+name: Links Nightly Strict
+
+on:
+  schedule:
+    - cron: '17 2 * * *'  # 02:17 UTC daily
+  workflow_dispatch:
+
+concurrency:
+  group: "pages-linkcheck-nightly"
+  cancel-in-progress: false
+
+jobs:
+  nightly-linkcheck:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+      - name: Build with Jekyll (GitHub Pages)
+        uses: actions/jekyll-build-pages@v1.0.13
+        env:
+          JEKYLL_ENV: production
+      - name: Check ALL links strictly (no dynamic ignore)
+        uses: lycheeverse/lychee-action@v2.6.1
+        with:
+          args: >-
+            --verbose
+            --no-progress
+            --exclude github.com --exclude x.com --exclude raspberrypi.com --exclude abuseipdb.com --max-concurrency 3
+            './_site/**/*.html'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

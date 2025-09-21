@@ -1,4 +1,4 @@
-name: jekyll-lint-build-urlcheck-deploy
+name: Jekyll Lint Build URL Check Deploy
 
 on:
   push:
@@ -41,6 +41,8 @@ jobs:
         env:
           JEKYLL_ENV: production
           PAGES_REPO_NWO: ${{ github.repository }}
+      - name: Generate dynamic lychee ignore
+        run: bash scripts/generate_lychee_ignore.sh
       - name: Check GitHub links with lychee-action
         uses: lycheeverse/lychee-action@v2.6.1
         with:
@@ -57,7 +59,8 @@ jobs:
           args: >-
             --verbose
             --no-progress
-            --exclude github.com --exclude x.com --exclude raspberrypi.com --exclude abuseipdb.com --exclude https://lazydom.xyz/blog/bitwarden-to-proton-pass-migration-guide/ --max-concurrency 2
+            --exclude github.com --exclude x.com --exclude raspberrypi.com --exclude abuseipdb.com --max-concurrency 2
+            --exclude-file .lycheeignore
             './_site/**/*.html'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
