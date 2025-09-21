@@ -11,6 +11,9 @@ RETENTION_DAYS=4
 
 echo "[lychee-ignore] Generating dynamic ignore list" >&2
 
+# Ensure file exists immediately (even if later logic aborts)
+touch "$IGNORE_FILE"
+
 # Ensure we have main to diff against (best effort)
 git fetch --quiet origin main || true
 
@@ -25,7 +28,6 @@ else
   echo "[lychee-ignore] New posts detected:\n${new_posts}" >&2
 fi
 
-touch "$IGNORE_FILE"
 
 # Prune entries older than cutoff (comments look like: # added: YYYY-MM-DD)
 cutoff=$(date -u -d "${RETENTION_DAYS} days ago" +%Y-%m-%d)

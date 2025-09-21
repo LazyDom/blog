@@ -30,6 +30,10 @@ jobs:
         uses: actions/jekyll-build-pages@v1.0.13
       - name: Generate dynamic lychee ignore
         run: bash scripts/generate_lychee_ignore.sh
+      - name: Debug lycheeignore presence (pre-checks)
+        run: |
+          echo "PWD=$(pwd)"; ls -al . | sed 's/^/  /'
+          if [ -f .lycheeignore ]; then echo '--- .lycheeignore (head) ---'; sed -n '1,60p' .lycheeignore; else echo 'MISSING .lycheeignore'; fi
       - name: Check GitHub links with lychee-action
         uses: lycheeverse/lychee-action@v2.6.1
         with:
@@ -51,9 +55,15 @@ jobs:
             './_site/**/*.html'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Ensure lycheeignore exists (fallback)
+        if: always()
+        run: |
+          if [ ! -f .lycheeignore ]; then echo '# added: $(date -u +%Y-%m-%d)' > .lycheeignore; fi
+          echo 'Final .lycheeignore size:'; wc -l .lycheeignore || true
       - name: Upload lychee ignore file
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: lychee-ignore-${{ github.run_id }}
-          path: .lycheeignore
+          path: ${{ github.workspace }}/.lycheeignore
+          include-hidden-files: true
