@@ -64,6 +64,12 @@ jobs:
             './_site/**/*.html'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Upload lychee ignore file
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lychee-ignore-${{ github.run_id }}
+          path: .lycheeignore
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
 
