@@ -60,5 +60,22 @@ for f in $new_posts; do
   fi
 done
 
+marker="# (auto) no dynamic ignores this run"
+active_count=$(grep -Ev '^\s*(#|$)' "$IGNORE_FILE" | wc -l || true)
+if [[ "$active_count" -eq 0 ]]; then
+  if ! grep -Fxq "$marker" "$IGNORE_FILE"; then
+    echo "$marker" >> "$IGNORE_FILE"
+    echo "[lychee-ignore] Added cosmetic empty marker" >&2
+  fi
+else
+  # Remove marker if present when real entries now exist
+  if grep -Fxq "$marker" "$IGNORE_FILE"; then
+    tmpfile_rm=$(mktemp)
+    grep -Fxv "$marker" "$IGNORE_FILE" > "$tmpfile_rm" || true
+    mv "$tmpfile_rm" "$IGNORE_FILE"
+    echo "[lychee-ignore] Removed cosmetic marker (real entries present)" >&2
+  fi
+fi
+
 echo "[lychee-ignore] Final $IGNORE_FILE contents:" >&2
 sed 's/^/  /' "$IGNORE_FILE" >&2
