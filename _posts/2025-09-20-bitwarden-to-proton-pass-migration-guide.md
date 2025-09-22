@@ -9,7 +9,7 @@ author: LazyDom
 date: 2025-09-20
 ---
 
-> This guide walks you through exporting from Bitwarden, importing into Proton Pass, verifying integrity (logins, TOTP seeds, notes, cards, identities), handling items that **do not** migrate automatically (attachments, passkeys, shares), and securely disposing of leftover export files.
+> This guide walks you through exporting from Bitwarden, importing into [Proton Pass](https://proton.me/pass), verifying integrity (logins, TOTP seeds, notes, cards, identities), handling items that **do not** migrate automatically (attachments, passkeys, shares), and securely disposing of leftover export files.
 
 <!--more-->
 
@@ -24,11 +24,11 @@ date: 2025-09-20
 ---
 ## 1. Why Migrate? :incoming_envelope:
 
-_Bitwarden vs Proton Pass: Key Differences_
+_Bitwarden vs [Proton Pass](https://proton.me/pass): Key Differences_
 
 {% gist LazyDom/128bdadda1a237cfbc1caadcc30bfb7a %}
 
-**NOT** a “better crypto” argument—both are strong. It’s about ecosystem consolidation, aliasing, and UI preferences.
+**NOT** a “better crypto” argument—both are strong. It’s about ecosystem consolidation, aliasing, and UI preferences with [Proton Pass](https://proton.me/pass).
 
 ### Hide My Email: why it shines
 - Unique per‑site aliases: avoid cross‑site tracking and credential stuffing that target reused addresses.
@@ -99,7 +99,7 @@ _**Security Notes:**_
 
 ---
 ## 5. Proton Pass Import :inbox_tray:
-Browser Extension / Web App → Settings → Import → Pick “Bitwarden”.
+Browser Extension / Web App → Settings → Import → Pick “Bitwarden” inside [Proton Pass](https://proton.me/pass).
 Upload the JSON; Proton parses and maps types:
 
 ![Proton Pass vault header with settings gear menu open highlighting the Import option entry point]({{ page.cdn_base }}proton_pass_home_pg.png)
@@ -224,4 +224,4 @@ Migration is mostly data hygiene and verification. Take the chance to prune, rot
 
 > Improvements or edge cases you hit? Add them to a running changelog file (not stored with secrets) so future migrations are even smoother.
 
-Happy (secure) migrating!
+Happy (secure) migrating! If you haven’t started yet, you can begin by creating your account at [Proton Pass](https://proton.me/pass).
