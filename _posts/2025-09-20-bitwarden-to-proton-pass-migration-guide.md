@@ -34,8 +34,9 @@ _Bitwarden vs [Proton Pass](https://proton.me/pass): Key Differences_
 - Unique per‑site aliases: avoid cross‑site tracking and credential stuffing that target reused addresses.
 - Autofill + instant generation: create and fill an alias at signup without leaving the flow.
 - Private reply routing: receive replies without exposing your real mailbox; turn off forwarding anytime.
-- One‑click kill switch: disable a spammed alias without touching your primary email or changing logins.
+- One‑click kill switch: disable a spammed alias without touching your primary email or changing logins (Acts like a smarter, managed "burner email" layer you can rotate or retire per site—without the hassle of juggling separate inboxes).
 - Clean separation: keep vendors from learning your canonical address while preserving deliverability.
+[Learn more about Email Aliases](https://proton.me/pass/aliases)
 
 ![Proton Pass generating a unique email alias during signup autofill]({{ page.cdn_base }}email-alias-autofill.png)
 *Proton Pass creating and autofilling a per‑site alias (your real address is never exposed)*
@@ -44,6 +45,7 @@ _Bitwarden vs [Proton Pass](https://proton.me/pass): Key Differences_
 - **Dark Web Monitoring** – Paid Proton plans can surface breach exposures tied to your primary email (and increasingly aliases), giving you early warning to rotate credentials before active abuse.
 - **Password Health (Weak / Reused)** – A consolidated view (or periodic manual audit) to spot weak, short, or re‑used secrets so you can prioritize rotations while everything is fresh in your mind post‑migration.
 - **Inactive / Missing 2FA Signal** – Identify high‑value accounts lacking TOTP/passkey fields; treat migration as a trigger to enable MFA everywhere feasible (email, registrar, banking, cloud consoles). Proton Pass makes it obvious which entries have no TOTP seed yet.
+- **Secure Password Sharing** – Share a single password, note, card, or a collection of items with anyone—even if they don’t use Proton Pass—via granular vault sharing; revoke or adjust access without exposing unrelated data. [Learn more about Password Sharing](https://proton.me/pass/password-sharing).
 
 ---
 ## 2. Pre‑Migration Checklist :clipboard:
