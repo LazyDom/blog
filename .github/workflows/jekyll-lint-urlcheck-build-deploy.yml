@@ -44,7 +44,7 @@ jobs:
       - name: Generate dynamic lychee ignore
         run: bash scripts/generate_lychee_ignore.sh
       - name: Check GitHub links with lychee-action
-        uses: lycheeverse/lychee-action@v2.6.1
+        uses: lycheeverse/lychee-action@v2.7.0
         with:
           args: >-
             --verbose
@@ -54,7 +54,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Check non-GitHub links with lychee-action
-        uses: lycheeverse/lychee-action@v2.6.1
+        uses: lycheeverse/lychee-action@v2.7.0
         with:
           args: >-
             --verbose
