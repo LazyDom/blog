@@ -25,7 +25,7 @@ jobs:
         env:
           JEKYLL_ENV: production
       - name: Check ALL links strictly (no dynamic ignore)
-        uses: lycheeverse/lychee-action@v2.6.1
+        uses: lycheeverse/lychee-action@v2.7.0
         with:
           args: >-
             --verbose
