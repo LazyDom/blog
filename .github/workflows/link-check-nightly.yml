@@ -16,7 +16,7 @@ jobs:
       contents: read
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
@@ -25,7 +25,7 @@ jobs:
         env:
           JEKYLL_ENV: production
       - name: Check ALL links strictly (no dynamic ignore)
-        uses: lycheeverse/lychee-action@v2.6.1
+        uses: lycheeverse/lychee-action@v2.7.0
         with:
           # Exclude medium.com because Medium often returns 403 for automated crawlers and produces noisy false positives in strict nightly checks.
           args: >-
