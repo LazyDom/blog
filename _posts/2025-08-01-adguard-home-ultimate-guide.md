@@ -38,7 +38,7 @@ I like to call it your personal **AdGuardian** :shield:—a digital shield for y
 *Already have your Pi set up? [Skip to Installing AdGuard Home](#2-install-adguard-home-on-raspberry-pi-os)* :fast_forward:
 
 - Raspberry Pi (any model with network access)
-> **Note:** In my case, I am using a [Raspberry Pi Zero 2 W H](https://amzn.to/4fgB7vi) (affiliate link). Any Raspberry Pi model with network access will work, but your experience may vary slightly depending on the hardware.
+> **Note:** In my case, I am using a [Raspberry Pi Zero 2 W H](https://amzn.to/4qopTJl) (affiliate link). Any Raspberry Pi model with network access will work, but your experience may vary slightly depending on the hardware.
 - [microSD card](https://amzn.to/4560f2Y) (affiliate link)
 
 *See [Affiliate Link Disclosure](#affiliate-link-disclosure) below.*
