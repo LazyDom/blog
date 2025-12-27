@@ -27,10 +27,11 @@ jobs:
       - name: Check ALL links strictly (no dynamic ignore)
         uses: lycheeverse/lychee-action@v2.6.1
         with:
+          # Exclude medium.com because Medium often returns 403 for automated crawlers and produces noisy false positives in strict nightly checks.
           args: >-
             --verbose
             --no-progress
-            --exclude github.com --exclude x.com --exclude raspberrypi.com --exclude abuseipdb.com --max-concurrency 3
+            --exclude github.com --exclude x.com --exclude raspberrypi.com --exclude abuseipdb.com --exclude medium.com --max-concurrency 3
             './_site/**/*.html'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
