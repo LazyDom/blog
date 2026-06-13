@@ -27,10 +27,11 @@ jobs:
       - name: Check ALL links strictly (no dynamic ignore)
         uses: lycheeverse/lychee-action@v2.7.0
         with:
-          # Exclude medium.com because Medium often returns 403 for automated crawlers and produces noisy false positives in strict nightly checks.
+          # Provide a root dir so lychee can resolve root-relative links; exclude medium.com due to 403s.
           args: >-
             --verbose
             --no-progress
+            --root _site
             --exclude github.com --exclude x.com --exclude raspberrypi.com --exclude abuseipdb.com --exclude medium.com --max-concurrency 3
             './_site/**/*.html'
         env:

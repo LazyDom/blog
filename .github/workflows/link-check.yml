@@ -33,9 +33,11 @@ jobs:
       - name: Check GitHub links with lychee-action
         uses: lycheeverse/lychee-action@v2.7.0
         with:
+          # Provide a root dir so lychee can resolve root-relative links like '/assets/...'
           args: >-
             --verbose
             --no-progress
+            --root _site
             --include github.com
             './_site/**/*.html'
         env:
@@ -43,10 +45,11 @@ jobs:
       - name: Check non-GitHub links with lychee-action
         uses: lycheeverse/lychee-action@v2.7.0
         with:
-          # Exclude medium.com because Medium often returns 403 for automated crawlers and produces noisy false positives.
+          # Provide a root dir so lychee can resolve root-relative links; exclude medium.com due to 403s.
           args: >-
             --verbose
             --no-progress
+            --root _site
             --exclude github.com --exclude x.com --exclude raspberrypi.com --exclude abuseipdb.com --exclude medium.com --max-concurrency 2
             --exclude-file .lycheeignore
             './_site/**/*.html'
