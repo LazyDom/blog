@@ -25,13 +25,13 @@ jobs:
         uses: actions/checkout@v6
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
       - name: Build with Jekyll (GitHub Pages)
         uses: actions/jekyll-build-pages@v1.0.13
       - name: Generate dynamic lychee ignore
         run: bash scripts/generate_lychee_ignore.sh
       - name: Check GitHub links with lychee-action
-        uses: lycheeverse/lychee-action@v2.7.0
+        uses: lycheeverse/lychee-action@v2.8.0
         with:
           # Provide a root dir so lychee can resolve root-relative links like '/assets/...'
           args: >-
@@ -43,7 +43,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Check non-GitHub links with lychee-action
-        uses: lycheeverse/lychee-action@v2.7.0
+        uses: lycheeverse/lychee-action@v2.8.0
         with:
           # Provide a root dir so lychee can resolve root-relative links; exclude medium.com due to 403s.
           args: >-
@@ -62,7 +62,7 @@ jobs:
           echo 'Final .lycheeignore size:'; wc -l .lycheeignore || true
       - name: Upload lychee ignore file
         if: always()
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v7
         with:
           name: lychee-ignore-${{ github.run_id }}
           path: ${{ github.workspace }}/.lycheeignore

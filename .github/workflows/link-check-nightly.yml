@@ -19,13 +19,13 @@ jobs:
         uses: actions/checkout@v6
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
       - name: Build with Jekyll (GitHub Pages)
         uses: actions/jekyll-build-pages@v1.0.13
         env:
           JEKYLL_ENV: production
       - name: Check ALL links strictly (no dynamic ignore)
-        uses: lycheeverse/lychee-action@v2.7.0
+        uses: lycheeverse/lychee-action@v2.8.0
         with:
           # Provide a root dir so lychee can resolve root-relative links; exclude medium.com due to 403s.
           args: >-
