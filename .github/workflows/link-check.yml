@@ -37,7 +37,7 @@ jobs:
           args: >-
             --verbose
             --no-progress
-            --root _site
+            --root-dir _site
             --include github.com
             './_site/**/*.html'
         env:
@@ -49,7 +49,7 @@ jobs:
           args: >-
             --verbose
             --no-progress
-            --root _site
+            --root-dir _site
             --exclude github.com --exclude x.com --exclude raspberrypi.com --exclude abuseipdb.com --exclude medium.com --max-concurrency 2
             --exclude-file .lycheeignore
             './_site/**/*.html'
