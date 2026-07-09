@@ -44,7 +44,7 @@ jobs:
       - name: Generate dynamic lychee ignore
         run: bash scripts/generate_lychee_ignore.sh
       - name: Check GitHub links with lychee-action
-        uses: lycheeverse/lychee-action@v2.8.0
+        uses: lycheeverse/lychee-action@v2.9.0
         with:
           # Provide a root dir so lychee can resolve root-relative links like '/assets/...'
           args: >-
@@ -56,7 +56,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Check non-GitHub links with lychee-action
-        uses: lycheeverse/lychee-action@v2.8.0
+        uses: lycheeverse/lychee-action@v2.9.0
         with:
           # Provide a root dir so lychee can resolve root-relative links; exclude medium.com due to 403s.
           args: >-
