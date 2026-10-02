@@ -2,7 +2,7 @@
 
 [![Links](https://github.com/LazyDom/blog/actions/workflows/link-check.yml/badge.svg?branch=main)](https://github.com/LazyDom/blog/actions/workflows/link-check.yml)
 
-Welcome to my personal blog about Data Engineering, Security, Home Automation, DevOps and more!
+Welcome to my personal blog about Data, Security, Home Automation, DevOps and more!
 
 Yet Another Data Guy, Security Evangelist, and Home Automation Geek. I love tinkering with new tech and sharing what I learn.
 
